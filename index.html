@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan Anual de SST - ACG SAC | ICPNA - UNMSM</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Arial,sans-serif;background:#051329;color:#ccd6f6;min-height:100vh}
+
+/* Header general */
+header{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 10px 25px;
+  border-bottom: 2px solid #00e5ff;
+  gap: 20px;
+  background: #071933;
+}
+
+.brand{display:flex;align-items:center;gap:12px;justify-self:start}
+.logo{width:56px;height:56px;object-fit:contain;border-radius:4px}
+.brand small{display:block;color:#8ba3c7;font-size:11px;line-height:1.3}
+
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.center h1{font-size:18px;color:#00e5ff;letter-spacing:0.5px;margin-bottom:2px}
+.center h2{font-size:13px;margin:2px 0;color:#ccd6f6}
+.center p{font-size:11px;color:#8ba3c7;margin:1px 0}
+.center em{color:#f4d06f}
+
+.episst{justify-self:end;display:flex;flex-direction:column;align-items:center;text-align:center}
+.episst b{color:#00e676;font-size:18px;letter-spacing:0.5px;margin-bottom:2px}
+.episst span{display:block;color:#8ba3c7;font-size:11px;line-height:1.3}
+
+nav{padding:10px 20px 6px;background:#07152c}
+.navrow{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;margin-bottom:4px}
+.navrow button{border:0;padding:9px 5px;background:#0d264a;color:#ccd6f6;cursor:pointer;border-radius:4px;font-size:12px;transition:all .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.navrow button:hover,.navrow button.active{background:#00e5ff;color:#051329;font-weight:700}
+
+main{margin:0 20px 15px;background:#030d1d;border:1px solid #102d54;min-height:calc(100vh - 180px);border-radius:6px;overflow:hidden}
+.home{height:100%;display:flex;flex-direction:column;padding:12px}
+.video-frame{width:100%;height:calc(100vh - 220px);min-height:480px;border:none;border-radius:6px;background:#000}
+
+.module{display:flex;min-height:calc(100vh - 180px);background:#051329}
+.sidebar{width:270px;background:#071933;border-right:1px solid #102d54;flex-shrink:0;max-height:calc(100vh - 180px);overflow-y:auto}
+.sidebar h3{background:#0d264a;color:#00e5ff;padding:14px;font-size:13px;border-bottom:1px solid #102d54;position:sticky;top:0;z-index:2}
+.sidebar button{display:block;width:100%;border:0;background:transparent;color:#8ba3c7;text-align:left;padding:11px 14px;cursor:pointer;font-size:12px;border-bottom:1px solid rgba(255,255,255,0.03);transition:all .2s}
+.sidebar button:hover,.sidebar button.active{background:#0f3261;color:#00e5ff;font-weight:bold;padding-left:18px}
+.card{flex:1;background:#071d3d;margin:20px;padding:25px;color:#e6f1ff;overflow:auto;border-radius:6px;border:1px solid #102d54}
+.card h2{color:#00e5ff;font-size:19px;border-bottom:1px solid #102d54;padding-bottom:10px;margin-bottom:16px}
+.content{white-space:pre-line;line-height:1.75;font-size:14px;color:#c0ccdc}
+
+/* Layout dividido alineado ARRIBA con imagen profesional a la derecha */
+.split-container{
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:26px;
+  align-items:flex-start;
+}
+.split-text{
+  white-space:pre-line;
+  line-height:1.75;
+  font-size:13.5px;
+  color:#c0ccdc;
+}
+.split-img-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:#071933;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #102d54;
+  width:100%;
+}
+.split-img-wrap b{
+  color:#00e5ff;
+  font-size:11.5px;
+  margin-bottom:8px;
+  text-align:center;
+  letter-spacing:0.5px;
+}
+.split-img{
+  width:100%;
+  max-width:540px;
+  height:auto;
+  border-radius:6px;
+  border:1px solid #143560;
+  box-shadow:0 4px 14px rgba(0,0,0,0.45);
+}
+
+/* Tablas */
+.content table{width:100%;border-collapse:collapse;margin:15px 0;font-size:13px}
+.content th{background:#0f3261;color:#00e5ff;padding:9px;text-align:left;border:1px solid #143e75}
+.content td{padding:8px 9px;border:1px solid #143e75;color:#e2e8f0}
+
+/* Listas de Programas */
+.program-list{display:flex;flex-direction:column;gap:12px;margin:15px 0;width:100%}
+.program-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#071933;
+  padding:14px 18px;
+  border-radius:6px;
+  border:1px solid #102d54;
+  width:100%;
+}
+.program-item span{color:#e6f1ff;font-size:13.5px;font-weight:500}
+.program-item .btn-dl{
+  background:#0d264a;
+  color:#00e5ff;
+  border:1px solid #00e5ff;
+  padding:7px 14px;
+  border-radius:4px;
+  text-decoration:none;
+  font-size:11.5px;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:all .2s;
+  white-space:nowrap;
+}
+.program-item .btn-dl:hover{background:#00e5ff;color:#051329}
+
+/* Integrantes */
+.team-container{padding:35px 20px 40px;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:calc(100vh - 200px)}
+.team-header{text-align:center;margin-bottom:35px}
+.team-header h2{font-size:26px;color:#00e5ff;letter-spacing:2px;text-transform:uppercase}
+.team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;width:100%;max-width:1350px}
+.member-card{background:#071933;border:1px solid #102d54;border-radius:10px;padding:26px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform .2s,border-color .2s}
+.member-card:hover{border-color:#00e5ff;transform:translateY(-5px)}
+.member-photo-slot{width:130px;height:155px;background:#0d264a;border:2px solid #00e5ff;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,0.4)}
+.member-photo-slot img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.member-name{font-size:13.5px;font-weight:600;color:#e6f1ff;margin-bottom:8px;line-height:1.4;min-height:40px;display:flex;align-items:center;justify-content:center}
+.member-code{font-size:12.5px;color:#00e676;font-family:monospace;margin-bottom:4px}
+.member-role{font-size:11.5px;color:#8ba3c7}
+
+/* Dashboard */
+.dash-container{padding:24px 30px;background:#020b17;display:flex;flex-direction:column;gap:20px;min-height:100%}
+.dash-topbar{display:flex;justify-content:space-between;align-items:center}
+.dash-title-group{display:flex;align-items:center;gap:16px}
+.dash-cal-icon{width:48px;height:48px;border-radius:10px;background:#00e5a3;display:flex;align-items:center;justify-content:center;color:#041a2e;font-size:26px;box-shadow:0 0 15px rgba(0,229,163,0.3)}
+.dash-titles h2{font-size:22px;color:#ffffff;font-weight:700;letter-spacing:0.3px}
+.dash-titles h3{font-size:14px;color:#b0c4de;font-weight:400;margin:2px 0 4px}
+.dash-titles p{font-size:12.5px;color:#00e5a3;font-weight:500}
+.dash-top-right{display:flex;align-items:center;gap:18px}
+.dash-gen-date{display:flex;align-items:center;gap:8px;font-size:12px;color:#8ba3c7}
+.dash-gen-date span b{color:#ffffff;display:block}
+.dash-year-pill{border:1px solid #00b4d8;color:#00e5ff;border-radius:30px;padding:7px 22px;font-size:14px;font-weight:700;background:#052445;box-shadow:inset 0 0 10px rgba(0,180,216,0.2)}
+.dash-kpis{display:grid;grid-template-columns:repeat(5, 1fr);gap:16px}
+.kpi-card{background:#061830;border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:16px;border:1px solid #143560;position:relative;transition:transform .2s}
+.kpi-card:hover{transform:translateY(-2px)}
+.kpi-card.blue{border:1px solid #0077b6}.kpi-card.green{border:1px solid #00a86b}.kpi-card.amber{border:1px solid #d48b00}.kpi-card.red{border:1px solid #c92a2a}.kpi-card.purple{border:1px solid #4361ee}
+.kpi-ico{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.kpi-card.blue .kpi-ico{background:#0a437a;color:#38bdf8}.kpi-card.green .kpi-ico{background:#0b5337;color:#00e5a3}.kpi-card.amber .kpi-ico{background:#5c3e06;color:#fbbf24}.kpi-card.red .kpi-ico{background:#54121a;color:#f87171}.kpi-card.purple .kpi-ico{background:#1f2868;color:#818cf8}
+.kpi-info small{display:block;font-size:12px;color:#94a3b8;margin-bottom:3px}
+.kpi-info b{display:block;font-size:26px;color:#ffffff;font-weight:700;line-height:1}
+.kpi-info span{display:block;font-size:11px;color:#64748b;margin-top:4px}
+.dash-progress-box{background:#061830;border:1px solid #143560;border-radius:10px;padding:16px 22px}
+.dash-progress-title{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;color:#ffffff;margin-bottom:10px}
+.dash-progress-title span{display:flex;align-items:center;gap:8px;color:#00e5a3}
+.dash-prog-bar{width:100%;height:12px;background:#0c2547;border-radius:10px;overflow:hidden}
+.dash-prog-fill{width:25%;height:100%;background:linear-gradient(90deg,#00b4d8,#00e5a3);border-radius:10px}
+.dash-grid{display:grid;grid-template-columns:1.75fr 1.25fr;gap:20px}
+.dash-panel{background:#061830;border:1px solid #143560;border-radius:10px;padding:18px 22px;display:flex;flex-direction:column}
+.dash-panel-header{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:#ffffff;margin-bottom:14px}
+.dash-panel-header span.icon{color:#00e5a3;font-size:18px}
+.dash-table-wrap{overflow-x:auto;flex:1}
+.dtable{width:100%;border-collapse:collapse;font-size:12px;text-align:left}
+.dtable th{padding:10px 8px;color:#8ba3c7;font-weight:600;border-bottom:1px solid #143560}
+.dtable td{padding:10px 8px;color:#e2e8f0;border-bottom:1px solid #0d274c}
+.dtable tr:last-child td{border-bottom:none}
+.pill{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;display:inline-block}
+.pill.completada{background:#093b2a;color:#00e5a3;border:1px solid #00a86b}
+.pill.en-proceso{background:#3d2c05;color:#fbbf24;border:1px solid #d48b00}
+.pill.pendiente{background:#451218;color:#f87171;border:1px solid #c92a2a}
+.btn-see-all{margin-top:14px;background:transparent;border:1px solid #0077b6;color:#38bdf8;padding:9px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;width:fit-content;transition:all .2s}
+.btn-see-all:hover{background:#0077b6;color:#ffffff}
+.donut-section{display:flex;align-items:center;gap:24px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #143560}
+.donut-svg-wrap{position:relative;width:130px;height:130px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.donut-ring{width:130px;height:130px;border-radius:50%;background:conic-gradient(#0096c7 0% 40%,#00e5a3 40% 65%,#f59e0b 65% 80%,#8b5cf6 80% 90%,#f43f5e 90% 100%);display:flex;align-items:center;justify-content:center}
+.donut-inner{width:78px;height:78px;background:#061830;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut-inner b{font-size:18px;color:#ffffff;line-height:1}
+.donut-inner small{font-size:9.5px;color:#8ba3c7;margin-top:2px}
+.donut-legend{display:flex;flex-direction:column;gap:6px;flex:1;font-size:11.5px}
+.legend-row{display:flex;align-items:center;justify-content:space-between}
+.legend-label{display:flex;align-items:center;gap:8px;color:#cbd5e1}
+.legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.legend-val{color:#8ba3c7;font-size:11px}
+.bchart{display:flex;align-items:flex-end;justify-content:space-between;height:120px;padding:15px 0 5px;gap:6px;border-bottom:1px solid #143560;margin-bottom:12px}
+.bcol{display:flex;flex-direction:column;align-items:center;flex:1;height:100%;justify-content:flex-end}
+.bstack{width:100%;max-width:14px;display:flex;flex-direction:column-reverse;border-radius:3px;overflow:hidden}
+.b-seg-done{background:#00e5a3}.b-seg-prog{background:#f59e0b}.b-seg-wait{background:#f43f5e}
+.bcol small{font-size:9.5px;color:#8ba3c7;margin-top:6px}
+.bchart-legend{display:flex;justify-content:center;gap:16px;font-size:11px;color:#94a3b8;margin-bottom:16px}
+.bchart-legend span{display:flex;align-items:center;gap:6px}
+.safety-quote-card{background:linear-gradient(135deg, #072a4d, #061e38);border:1px solid #0077b6;border-radius:8px;padding:14px 18px;display:flex;align-items:center;gap:16px;position:relative;overflow:hidden}
+.shield-icon{width:42px;height:42px;border-radius:8px;background:#093b2a;border:1px solid #00e5a3;color:#00e5a3;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.safety-quote-text{font-size:14px;color:#ffffff;font-weight:600;line-height:1.4}
+
+@media(max-width:1050px){
+  .dash-kpis{grid-template-columns:repeat(2, 1fr)}
+  .dash-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  header{grid-template-columns:1fr;text-align:center;gap:10px}
+  .brand,.episst{justify-content:center;justify-self:center;align-items:center;text-align:center}
+  .navrow{grid-template-columns:repeat(3,1fr)}
+  .module{flex-direction:column}.sidebar{width:100%;max-height:200px;overflow:auto}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .dash-topbar{flex-direction:column;align-items:flex-start;gap:12px}
+  .split-container{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img id="unmsmLogo" class="logo" src="https://drive.google.com/thumbnail?id=11VJQZkElJEpY7lE6q_ucAJnbi3bezj7j&sz=w200" alt="UNMSM">
+    <div><strong>UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS</strong>
+      <small>Universidad del Perú, Decana de América<br>Facultad de Ingeniería Industrial</small>
+    </div>
+  </div>
+  <div class="center">
+    <h1>PLAN ANUAL DE SEGURIDAD Y SALUD EN EL TRABAJO (SST)</h1>
+    <h2>EMPRESA: ARQUITECTURA Y CONTRATISTAS GENERALES SAC (ACG SAC) - OBRA ICPNA</h2>
+    <p>Curso: PREVENCIÓN Y CONTROL DE RIESGOS LABORALES Y AMBIENTALES</p>
+    <p><em>Docente: DR. EDITO ROJAS LINARES</em></p>
+  </div>
+  <div class="episst">
+    <b>EPISST</b>
+    <span>Escuela Profesional de Ingeniería<br>de Seguridad y Salud en el Trabajo</span>
+  </div>
+</header>
+
+<nav>
+ <div class="navrow" id="nav1"></div>
+ <div class="navrow" id="nav2"></div>
+</nav>
+<main id="main"></main>
+
+<script>
+const spreadSheets = [
+  { name: "1. Programa Anual de Seguridad y Salud en el Trabajo", id: "1GmOr5S1dC7eg0yGaQ7uGxVqCzt2XfJEH" },
+  { name: "2. Programa Anual de Capacitación de Seguridad y Salud en el Trabajo", id: "1ZWc3qzMVKzb3wn9BIm2Ld41w0mFWlceN" },
+  { name: "3. Programa de Inspecciones", id: "1Z8MBGuwipBRCdO8MG942n1b7TZjHDzei" },
+  { name: "4. Programa de Monitoreo", id: "1-1r6V8636sQZB2hGmlHHCAxQ6Qp2ksZl" }
+];
+
+const lineaBaseSheet = {
+  name: "Lista de Verificación de Línea Base del SG-SST (R.M. 050-2013-TR)",
+  id: "1wcfn1WugRsguAlN6TomWWh5W0jdf0G42"
+};
+
+const ipercSheets = [
+  { name: "IPERC 01 - Demolición y Desmontaje de Estructuras Existentes", id: "1XpegRmlnHqDoA2BL2JbSuiLOhzMcry_H" },
+  { name: "IPERC 02 - Acarreo, Carga y Eliminación de Desmonte con Maquinaria", id: "1Fh6zHB1MA1cb45G_-sGM6tq6RO6Y8gOL" },
+  { name: "IPERC 03 - Excavación Masiva y Zanjas para Cimentaciones", id: "1OBJJVAjh5cwrVzWw6VqbOzRooNhHZAMp" },
+  { name: "IPERC 04 - Obras de Concreto Armado (Zapatas, Vigas y Columnas)", id: "1Iat-Hjd8aMhzshd8lNEY_jmlis4YPFZ4" },
+  { name: "IPERC 05 - Vaciado de Concreto Premezclado con Bomba y Camión Mixer", id: "1KBaUqLav-dWXOSD3ODrSRXv4V4SkCWby" },
+  { name: "IPERC 06 - Habilitación, Doblado y Colocación de Acero Estructural", id: "1icXqj9MHYwJd_I4mxcIJq_tSuXA3rIXD" },
+  { name: "IPERC 07 - Encofrado y Desencofrado en Muros y Losas Aligeradas", id: "1vYQEgvjn0BEU__ZWBX9JxjAWnjRoMuMe" },
+  { name: "IPERC 08 - Trabajos en Altura con Andamios Normados y Plataformas", id: "1Pzi8IZj00P0K002id3en0wwgk1MXhrk5" },
+  { name: "IPERC 09 - Trabajos en Caliente (Corte, Soldadura y Amolado)", id: "1ZcLLtcwl_gjhrLwfQmYQ1A8TugnCB6pu" },
+  { name: "IPERC 10 - Instalación y Montaje de Estructuras Metálicas y Coberturas", id: "13R_WjKxMBlTVQWiNx83lRjsUXVFhdZO7" },
+  { name: "IPERC 11 - Instalaciones Eléctricas Provisionales y Definitivas", id: "1DMb-ActdeXpN8LO32OW54b1LTOUmHfuX" },
+  { name: "IPERC 12 - Instalaciones Sanitarias y Redes de Drenaje", id: "1sZlhFjOoJ3Wz2VD9nprybhLltuFtDr9E" },
+  { name: "IPERC 13 - Trabajos en Espacios Confinados (Cisternas y Buzones)", id: "1i8MOwpj2ige-koQS0BSJf_JWuJP4lx5u" },
+  { name: "IPERC 14 - Albañilería, Asentado de Muros de Ladrillo y Tarrajeo", id: "158JGQfMaYaAKN_m8b1Hp8tXgNQR5ABP2" },
+  { name: "IPERC 15 - Instalación de Tabiquería Drywall y Cielos Rasos", id: "19sGJ3VNihCg51l6VJhuSpjvg6PrqhG-Z" },
+  { name: "IPERC 16 - Aplicación de Pintura, Selladores y Acabados Arquitectónicos", id: "1TeUVMHA2Owsemie5zWAgpMnvYxQo86tg" },
+  { name: "IPERC 17 - Colocación de Pisos, Cerámicos, Porcelanatos y Enchapes", id: "1b9H6x9MQxtSPyxEdNNJ06o3aFIboZjdg" },
+  { name: "IPERC 18 - Instalación de Vidrios, Ventanería y Muro Cortina", id: "1or6ZHhChYF7_22lQOecmeGyHTps7cik-" },
+  { name: "IPERC 19 - Limpieza Final de Obra, Retiro de Excedentes y Desmovilización", id: "13TkT9Hkans3DvXx19--5VVkQOreYx-bc" }
+];
+
+function buildProgramsHtml(){
+  return `
+    <p>El Plan está constituido por un conjunto de programas preventivos integrales formulados para asegurar la gestión técnica operacional de la obra:</p>
+    <div class="program-list">
+      ${spreadSheets.map(s => `
+        <div class="program-item">
+          <span>${s.name}</span>
+          <div style="display:flex;gap:8px">
+            <a class="btn-dl" href="https://docs.google.com/spreadsheets/d/${s.id}/export?format=xlsx" target="_blank" download>
+              ⬇ Descargar Excel
+            </a>
+            <a class="btn-dl" href="https://docs.google.com/spreadsheets/d/${s.id}/edit" target="_blank">
+              👁 Ver Hoja
+            </a>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function buildLineaBaseHtml(){
+  return `
+    <p>Para el desarrollo de la línea base de la organización, se tomó como referencia la Lista de Verificación de los Lineamientos del Sistema de Gestión de Seguridad y Salud Ocupacional, establecido en la Resolución Ministerial N° 050-2013-TR "Formatos Referenciales de los Registros Obligatorios del SGSST", la Ley N° 29783, su Reglamento D.S. N° 005-2012-TR y el D.S. N° 011-2019-TR.</p>
+    <br>
+    <p>A través de este diagnóstico preventivo se evaluaron los 8 pilares del sistema de gestión, determinando el nivel de cumplimiento actual e identificando brechas operativas para establecer acciones correctivas inmediatas:</p>
+    <div class="program-list">
+      <div class="program-item">
+        <span>${lineaBaseSheet.name}</span>
+        <div style="display:flex;gap:8px">
+          <a class="btn-dl" href="https://docs.google.com/spreadsheets/d/${lineaBaseSheet.id}/export?format=xlsx" target="_blank" download>
+            ⬇ Descargar Excel
+          </a>
+          <a class="btn-dl" href="https://docs.google.com/spreadsheets/d/${lineaBaseSheet.id}/edit" target="_blank">
+            👁 Ver Hoja
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function buildIpercHtml(){
+  return `
+    <p>A continuación se detallan las Matrices de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC Línea Base / Continuo) formuladas para cada una de las actividades operativas de la obra:</p>
+    <div class="program-list">
+      ${ipercSheets.map(s => `
+        <div class="program-item">
+          <span>${s.name}</span>
+          <div style="display:flex;gap:8px">
+            <a class="btn-dl" href="https://docs.google.com/spreadsheets/d/${s.id}/export?format=xlsx" target="_blank" download>
+              ⬇ Descargar Excel
+            </a>
+            <a class="btn-dl" href="https://docs.google.com/spreadsheets/d/${s.id}/edit" target="_blank">
+              👁 Ver Hoja
+            </a>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function buildIntroHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        El Instituto Cultural Peruano Norteamericano (ICPNA) es una institución educativa y cultural referente en el Perú, dedicada a la enseñanza del idioma inglés y a la promoción del intercambio binacional.
+
+        En el marco de su plan estratégico de expansión y modernización de infraestructura, la empresa **ARQUITECTURA Y CONTRATISTAS GENERALES S.A.C. (ACG S.A.C.)** asume la ejecución del proyecto denominado **"Demolición, Ampliación y Remodelación de las instalaciones de la Sede Lima – Norte"**.
+
+        Este Plan Anual de Seguridad y Salud en el Trabajo (SST) establece la estrategia técnica, los procedimientos preventivos y las actividades operativas que se ejecutarán para garantizar condiciones laborales seguras, eliminando peligros, reduciendo riesgos y protegiendo la salud integral de todos los colaboradores, contratistas y terceros en obra.
+      </div>
+      <div class="split-img-wrap">
+        <b>SEDE INSTITUCIONAL / VISTA GENERAL DEL PROYECTO</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1yGWLEE9p3fp8qr0VvdIqofmzudtu0iqj&sz=w1000" alt="Sede ICPNA">
+      </div>
+    </div>
+  `;
+}
+
+function buildAlcanceHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        El presente Plan Anual de Seguridad y Salud en el Trabajo es de cumplimiento estricto y obligatorio para la totalidad de las actividades, fases operativas y frentes de trabajo comprendidos en la obra **"Demolición, Ampliación y Remodelación de las instalaciones de la Sede Lima – Norte"** del ICPNA.
+
+        **Ámbito de Aplicación:**
+        • Todo el personal directo de la empresa ARQUITECTURA Y CONTRATISTAS GENERALES S.A.C. (ACG S.A.C.).
+        • Empresas subcontratistas, profesionales independientes, proveedores y prestadores de servicios.
+        • Personal en modalidades formativas, visitantes autorizados y personal de supervisión externa.
+        • Abarca zonas operativas de excavación, estructuras, acabados, áreas administrativas y almacenes temporales de obra.
+      </div>
+      <div class="split-img-wrap">
+        <b>ÁMBITO DE APLICACIÓN Y ZONA DE TRABAJO EN OBRA</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1oHDzLXeF8gPQJGbO9nsTZztYq6U8t42m&sz=w1000" alt="Ámbito de Aplicación">
+      </div>
+    </div>
+  `;
+}
+
+function buildOrganigramaComiteHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        En cumplimiento de la Ley N° 29783 y el D.S. N° 011-2019-TR (Reglamento de SST en Construcción), ACG S.A.C. conforma un **Comité / Subcomité de SSOMA** de carácter paritario y bipartito, constituido por igual número de representantes del empleador y de los trabajadores.
+
+        **Estructura Organizacional:**
+        • **Presidente:** Elegido por el Comité entre sus miembros; encabeza las reuniones y coordina las acciones preventivas.
+        • **Secretario:** Encargado de la gestión documental, redacción de actas y seguimiento de acuerdos.
+        • **Miembros Titulares y Suplentes:** Representantes de la línea directiva y trabajadores encargados de la inspección periódica y vigilancia de la salud ocupacional.
+      </div>
+      <div class="split-img-wrap">
+        <b>ESTRUCTURA ORGANIZACIONAL / ORGANIGRAMA DEL COMITÉ DE SST</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1PCZxTSRKktQkp0VDs0zJZupUcU8PGvEm&sz=w1000" alt="Organigrama SST">
+      </div>
+    </div>
+  `;
+}
+
+function buildMetodologiaIpercHtml(){
+  return `
+    <p>La identificación de peligros, evaluación de riesgos y determinación de controles se formula siguiendo la metodología matricial por puestos de trabajo y grupos de exposición similar (GES), abarcando actividades rutinarias y no rutinarias en demolición y edificación.</p>
+    <div class="large-img-wrap" style="margin-top:20px;background:#071933;padding:14px;border-radius:8px;border:1px solid #102d54;display:flex;flex-direction:column;align-items:center;width:100%;">
+      <b style="color:#00e5ff;font-size:12px;margin-bottom:10px;text-align:center;">MATRIZ Y METODOLOGÍA IPERC - EVALUACIÓN DE RIESGOS Y CONTROLES</b>
+      <img src="https://drive.google.com/thumbnail?id=15uKxXyM6C83FdbhOzenNr5y_xcIEnG_J&sz=w1000" style="width:100%;max-width:700px;height:auto;border-radius:6px;border:1px solid #143560;" alt="Metodología IPERC">
+    </div>
+  `;
+}
+
+function buildEvalRiesgosHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        Conforme al artículo 21 de la Ley N° 29783 y la norma ISO 45001:2018, la determinación de medidas de control en la obra se aplica bajo la **Jerarquía de Controles**, priorizando las medidas de ingeniería sobre los equipos individuales:
+
+        1. **Eliminación:** Suprimir el peligro o proceso de riesgo en la fuente.
+        2. **Sustitución:** Reemplazar materiales o herramientas por alternativas de menor riesgo.
+        3. **Controles de Ingeniería:** Barandas perimetrales rígidas, sistemas de entibado, mallas de protección y colectores de polvo.
+        4. **Controles Administrativos:** Procedimientos Escritos de Trabajo Seguro (PETS), Permisos Escritos para Trabajos de Alto Riesgo (PETAR), señalización e inspecciones.
+        5. **Equipos de Protección Personal (EPP):** Dotación certificada de EPP básico y específico como última línea de defensa.
+      </div>
+      <div class="split-img-wrap">
+        <b>JERARQUÍA DE CONTROLES Y EVALUACIÓN DE RIESGOS EN OBRA</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=15IcSR0yGcAAiNg7Wx6qdTeYdxpObWEDn&sz=w1000" alt="Evaluación de Riesgos">
+      </div>
+    </div>
+  `;
+}
+
+function buildMapaRiesgosHtml(){
+  return `
+    <p>Planos sectorizados y mapas de riesgo ubicados en lugares visibles de la obra, señalando botiquines, camillas rígidas, estaciones de emergencia y rutas de evacuación seguras hacia los puntos de reunión.</p>
+    <div class="large-img-wrap" style="margin-top:20px;background:#071933;padding:14px;border-radius:8px;border:1px solid #102d54;display:flex;flex-direction:column;align-items:center;width:100%;">
+      <b style="color:#00e5ff;font-size:12px;margin-bottom:10px;text-align:center;">MAPA DE RIESGOS Y PLANO DE EVACUACIÓN DE LA OBRA ICPNA</b>
+      <img src="https://drive.google.com/thumbnail?id=13JaZLieIhS747xKERBRmtZ2jNqIEAG9Q&sz=w1000" style="width:100%;max-width:700px;height:auto;border-radius:6px;border:1px solid #143560;" alt="Mapa de Riesgos">
+    </div>
+  `;
+}
+
+function buildPoliticaHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        POLÍTICA INTEGRADA DE SEGURIDAD Y SALUD OCUPACIONAL Y MEDIO AMBIENTE
+
+        En ARQUITECTURA Y CONTRATISTAS GENERALES S.A.C. (ACG S.A.C.), empresa peruana del sector privado con amplia experiencia en diseño arquitectónico, ejecución y supervisión de obras, nos comprometemos a garantizar condiciones de trabajo seguras y saludables para la prevención de lesiones, dolencias e incidentes relacionados con el trabajo.
+
+        • Liderazgo visible y compromiso corporativo con la seguridad.
+        • Cumplimiento estricto de la legislación nacional y estándares aplicables.
+        • Participación activa de los trabajadores y consulta permanente.
+        • Mejora continua del desempeño del Sistema de Gestión de SST.
+      </div>
+      <div class="split-img-wrap">
+        <b>DOCUMENTO OFICIAL DE POLÍTICA INTEGRADA DE SST Y MA</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1DHEMLTtvjkp7zNAJp4ffqS4F3e_4PCiZ&sz=w1000" alt="Política de SST">
+      </div>
+    </div>
+  `;
+}
+
+function buildSaludGeneralHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        La Gestión de Salud Ocupacional tiene como finalidad prevenir enfermedades y alteraciones de la salud relacionadas con las condiciones de trabajo, mediante la identificación, evaluación y control de los factores de riesgo ocupacional presentes en las actividades de construcción.
+
+        La empresa implementará acciones de vigilancia de la salud, evaluaciones médicas ocupacionales, seguimiento de resultados y medidas preventivas, considerando los riesgos físicos, químicos, biológicos, ergonómicos, disergonómicos y psicosociales presentes en los diferentes puestos de trabajo.
+
+        La información obtenida permitirá establecer medidas de prevención, promoción de la salud y control de exposiciones ocupacionales, respetando la confidencialidad de la información médica de los trabajadores.
+      </div>
+      <div class="split-img-wrap">
+        <b>FLUJO Y ESTÁNDARES DE SALUD OCUPACIONAL EN OBRA</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1DCMb4BmCfMqJnlqrWi2y6h9m5B38DvuS&sz=w1000" alt="Salud Ocupacional">
+      </div>
+    </div>
+  `;
+}
+
+function buildSubcontratasHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        **12. CLIENTES, SUBCONTRATOS Y PROVEEDORES**
+        ACG S.A.C. establece el control y seguimiento de los subcontratistas mediante el procedimiento SST-PROC-024, verificando el cumplimiento de los requisitos legales, contractuales y de SSOMA.
+
+        a) **Evaluación previa:** Demostración de condiciones seguras antes de iniciar actividades.
+        b) **Cumplimiento del Plan SSOMA:** Acatamiento de normas internas y legislación peruana.
+        c) **Capacitación e inducción:** Participación obligatoria en inducciones y charlas de 10 minutos.
+        d) **Control operativo:** Verificación de IPERC, ATS, PETS y uso de EPP/EPC.
+        e) **Gestión ambiental:** Disposición adecuada de residuos sólidos (RCD).
+      </div>
+      <div class="split-img-wrap">
+        <b>FLUJO DE CONTROL Y COORDINACIÓN DE SUBCONTRATISTAS</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1Wma95Ia4gMYnlzwi8ypft99kILH0ysQF&sz=w1000" alt="Flujo Subcontratistas">
+      </div>
+    </div>
+  `;
+}
+
+function buildCapacitacionesIntroHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        El Programa de Capacitación en Seguridad y Salud en el Trabajo (SST) de ARQUITECTURA Y CONTRATISTAS GENERALES S.A.C. (ACG S.A.C.), para la obra “Demolición, Ampliación y Remodelación de las instalaciones de la Sede Lima – Norte” del Instituto Cultural Peruano Norteamericano (ICPNA), constituye un componente fundamental del Sistema de Gestión de SST. Su propósito es garantizar la adquisición, desarrollo y fortalecimiento continuo de los conocimientos, habilidades y competencias preventivas de todo el personal directivo, técnico, administrativo, operativo y subcontratado.
+
+        La capacitación permitirá que los trabajadores reconozcan los peligros asociados a sus actividades, comprendan los riesgos a los que se encuentran expuestos y apliquen correctamente las medidas de prevención y control establecidas. Asimismo, contribuirá a promover comportamientos seguros, prevenir accidentes de trabajo y enfermedades ocupacionales y fortalecer la participación del personal en la gestión preventiva.
+
+        El programa se desarrollará considerando las características de la obra, las actividades constructivas, los riesgos identificados en la matriz IPERC y las necesidades de formación de cada puesto de trabajo, tomando como referencia la Ley N.° 29783, su Reglamento aprobado mediante D.S. N.° 005-2012-TR y modificatorias, el D.S. N.° 011-2019-TR (Reglamento de SST para el Sector Construcción), la Norma Técnica G.050 y los lineamientos aplicables de la ISO 45001:2018.
+      </div>
+      <div class="split-img-wrap">
+        <b>PROGRAMA DE CAPACITACIONES EN SST EN OBRA</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1VA3ZtB3XepPW0JP72WCTBg38Dme2AEOL&sz=w1000" alt="Capacitaciones">
+      </div>
+    </div>
+  `;
+}
+
+function buildInvestigacionAccIntroHtml(){
+  return `
+    <div class="split-container">
+      <div class="split-text">
+        ARQUITECTURA Y CONTRATISTAS GENERALES S.A.C. (ACG S.A.C.) establece un sistema formal y riguroso para la notificación, registro, investigación y seguimiento de todos los incidentes, incidentes peligrosos, accidentes de trabajo y enfermedades ocupacionales que ocurran en la obra “Demolición, Ampliación y Remodelación de las instalaciones de la Sede Lima – Norte” del ICPNA.
+
+        El propósito fundamental de la investigación no es buscar culpables, sino determinar de manera objetiva las causas inmediatas (actos y condiciones subestándares) y las causas básicas (factores personales y factores del trabajo) que originaron el evento, a fin de implementar medidas correctivas y preventivas eficaces que eviten su recurrencia y fortalezcan el Sistema de Gestión de SST, conforme a la Ley N.° 29783, el D.S. N.° 005-2012-TR y el D.S. N.° 011-2019-TR.
+      </div>
+      <div class="split-img-wrap">
+        <b>PROCEDIMIENTO DE INVESTIGACIÓN DE ACCIDENTES E INCIDENTES</b>
+        <img class="split-img" src="https://drive.google.com/thumbnail?id=1FVTf1TcQ-rvvsdkdmy0vperh4r_49sMW&sz=w1000" alt="Investigación de Accidentes">
+      </div>
+    </div>
+  `;
+}
+
+// Repositorio de capítulos
+const docDataStore = {
+  terminologia: `TERMINOLOGÍA Y DEFINICIONES:
+
+• Accidente de Trabajo: Todo suceso repentino que sobrevenga por causa o con ocasión del trabajo y que produzca en el trabajador una lesión orgánica, una perturbación funcional, una invalidez o la muerte.
+• Accidente Leve: Suceso que genera en el accidentado un descanso breve con retorno máximo al día siguiente a sus labores habituales.
+• Accidente Incapacitante: Suceso cuya lesión da lugar a descanso médico, ausencia justificada y tratamiento asistencial.
+• Accidente Mortal: Suceso cuyas lesiones producen el deceso del trabajador.
+• Incidente Peligroso: Todo suceso potencialmente riesgoso que pudiera causar lesiones o enfermedades a los trabajadores o a la población.
+• IPERC: Identificación de Peligros, Evaluación de Riesgos y Medidas de Control.
+• PETS: Procedimiento Escrito de Trabajo Seguro.
+• PETAR: Permiso Escrito para Trabajos de Alto Riesgo.
+• SGSST: Sistema de Gestión de Seguridad y Salud en el Trabajo.`,
+
+  referencias: `MARCO LEGAL Y NORMATIVO APLICABLE:
+
+1. Regulación Específica en SST:
+• Ley N° 29783, Ley de Seguridad y Salud en el Trabajo, y sus modificatorias Ley N° 30222 y Ley N° 31246.
+• D.S. N° 005-2012-TR, Reglamento de la Ley N° 29783 y modificatorias.
+• D.S. N° 011-2019-TR, Reglamento de Seguridad y Salud en el Trabajo en el Sector Construcción.
+• R.M. N° 050-2013-TR, Formatos Referenciales con los registros obligatorios del SGSST.
+
+2. Normativa Técnica de Edificación y Sectorial:
+• Norma Técnica de Edificación G.050: Seguridad durante la Construcción.
+• R.M. N° 111-2013-MEM/DM, Reglamento de Seguridad y Salud en el Trabajo con Electricidad (RESESATE).
+• Ley N° 30102, Medidas preventivas contra los efectos nocivos de la radiación solar.`
+};
+
+// Estructura de base de datos completa
+const data = {
+"Introducción":{
+  "1. Introducción": buildIntroHtml(),
+  "1.1. Programas de Prevención Vinculados": buildProgramsHtml(),
+  "Terminología": docDataStore.terminologia,
+  "Referencias Legales": docDataStore.referencias
+},
+
+"Alcance y Línea Base":{
+  "2. Ámbito de Aplicación (Alcance)": buildAlcanceHtml(),
+  "3. Línea Base del SG-SST": buildLineaBaseHtml()
+},
+
+"Política y Objetivos de SST":{
+  "4. Política de SST": buildPoliticaHtml(),
+  "4.1. Negativa al Trabajo Inseguro":`POLÍTICA DE NEGATIVA A REALIZAR UN TRABAJO INSEGURO
+
+ACG S.A.C. reconoce y garantiza el derecho de todo trabajador a rehusarse a ejecutar una labor cuando detecte condiciones de riesgo grave e inminente que pongan en peligro su vida o integridad física, sin temor a sanciones o represalias.`,
+  "4.2. Control de Alcohol y Drogas":`POLÍTICA DE CONTROL DE ALCOHOL Y DROGAS
+
+Se establece la prohibición absoluta del ingreso, posesión o consumo de alcohol y sustancias estupefacientes en todos los frentes de trabajo de la obra ICPNA Sede Lima Norte, respaldado por controles inopinados periódicos.`,
+  "5. Objetivos y Metas del Proyecto":`OBJETIVOS Y METAS DE SST:
+• Cero accidentes fatales e incapacitantes.
+• Cumplimiento al 100% del Programa Anual de Capacitación e Inspecciones.
+• Ejecución del 100% de EMOs previos al inicio de labores operativas.`
+},
+
+"Comité de SST":{
+  "6.1. Estructura y Organigrama del Comité": buildOrganigramaComiteHtml(),
+  "6.2. Funciones y Responsabilidades":`Funciones principales del Comité / Subcomité de SSOMA: aprobar el plan, vigilar el cumplimiento normativo, realizar inspecciones mensuales e investigar accidentes e incidentes peligrosos.`
+},
+
+"IPERC y Mapas":{
+  "6.1. Metodología IPERC y Aspectos Ambientales": buildMetodologiaIpercHtml(),
+  "6.2. Evaluación de Riesgos y Jerarquía de Controles": buildEvalRiesgosHtml(),
+  "6.3. Matrices IPERC por Actividad": buildIpercHtml(),
+  "6.4. Mapas de Riesgo y Planos de Evacuación": buildMapaRiesgosHtml()
+},
+
+"Organización y Responsabilidades":{
+  "7.1. Responsabilidades de la Gerencia General y Gerencia de Operaciones":`- La Gerencia General de ACG S.A.C., como máxima autoridad ejecutiva de la organización, y la Gerencia de Operaciones, como responsable de la estrategia y ejecución técnica de los proyectos, asumen de manera conjunta e indelegable el liderazgo visible, la dirección estratégica y la rendición de cuentas (accountability) respecto a la efectividad global del SGSST en el proyecto ICPNA Sede Lima Norte, comprometiéndose expresamente a:
+- Liderazgo Visible y Compromiso Institucional: Ejercer un liderazgo activo e ininterrumpido en materia de SST, demostrando el compromiso corporativo a través de la firma de las Políticas Integradas, la participación en las revisiones gerenciales, las visitas de inspección ejecutiva a la obra y la asignación prioritaria de la seguridad de los trabajadores sobre la producción o los plazos de entrega.
+- Asignación Intangible de Recursos: Garantizar la provisión oportuna, suficiente, intangible e independizada de los recursos financieros, tecnológicos, materiales y humanos especializados necesarios para la correcta ejecución del Plan Anual de Seguridad y Salud en el Trabajo (PASST), abarcando la compra de EPP/EPC certificados, contratación de servicios de medicina ocupacional, monitoreos ambientales y programas de capacitación.
+- Integración del SGSST en los Procesos Operativos: Asegurar que las directrices del sistema de gestión preventivo se integren formalmente en todos los procesos de planificación técnica, logística de suministros, selección de contratistas, métodos de construcción y programación diaria del proyecto ICPNA Sede Lima Norte.
+- Revisión por la Dirección y Mejora Continua: Conducir periódicamente (como mínimo una vez al año) la Revisión del SGSST por la Dirección, analizando cuantitativamente el cumplimiento de metas e indicadores, el desempeño en auditorías internas/externas, las investigaciones de accidentes y disponiendo las acciones CAPA para el fortalecimiento del sistema.
+- Disposición de Auditorías: Disponer la realización de auditorías internas periódicas y de la auditoría externa legal obligatoria ante el MTPE (regida por el D.S. N° 014-2013-TR), garantizando la independencia del equipo auditor y destinando presupuesto para el levantamiento de no conformidades.
+- Exigencia de Cumplimiento Normativo: Exigir a la línea de mando (Residente, Jefes de Frente, Supervisores) y a las empresas subcontratistas el acatamiento irrestricto de las normas legales en SST y del Reglamento Interno de SST (RISST) de ACG S.A.C., aplicando sanciones disciplinarias o contractuales en caso de reincidencia o faltas graves.`,
+
+  "7.2. Responsabilidades del Jefe SSOMA, Médico Ocupacional y Supervisores":`- Las funciones clave del equipo de prevención y supervisión de la obra se distribuyen técnicamente según la especialidad operativa:
+- Jefe SSOMA (Especialista SSOMA de Obra): Es el responsable técnico legal de asesorar formalmente a la Residencia de Obra y a la línea de mando en la aplicación estricta de la legislación en SST y estándares ISO 45001. Elabora y actualiza la Matriz IPERC de Línea Base, coordina la formulación de los PETS/PETAR para tareas de alto riesgo, administra el programa de inspecciones planeadas/inopinadas, lidera las investigaciones de incidentes/accidentes mediante metodologías causa-raíz y ejerce la autoridad irrestricta de paralizar de manera inmediata cualquier trabajo o frente operativo donde exista riesgo inminente para la vida o la salud de los trabajadores.
+- Médico Ocupacional: Dirige el Plan de Vigilancia de la Salud de los Trabajadores conforme a la R.M. N° 312-2011-MINSA. Audita las clínicas autorizadas, evalúa los protocolos de Exámenes Médicos Ocupacionales (EMO: pre-ocupacionales, periódicos y de retiro) determinando la aptitud médica para el puesto, custodia las historias clínicas bajo estricta confidencialidad médica, diseña programas de prevención ergonómica y respiratoria (exposición a polvo de sílice y ruido), coordina el monitoreo de higiene industrial y realiza el seguimiento clínico continuo del personal accidentado o diagnosticado con enfermedades ocupacionales.
+- Supervisores de Obra y Residentes: Ejercen el control operativo directo de los frentes de trabajo. Son directamente responsables de verificar que ninguna actividad se ejecute sin el ATS elaborado in situ, el PETAR debidamente firmado por los responsables y los equipos EPP/EPC verificados; asimismo, dictan e imparten diariamente las charlas de 10 minutos antes de la jornada, supervisan el uso de herramientas e inspeccionan continuamente las condiciones de seguridad en las tareas de demolición, excavación y estructuras.`,
+
+  "7.3. Funciones de Capataces, Trabajadores y Subcontratistas":`- La ejecución operativa segura del proyecto descansa en las funciones asignadas a los niveles ejecutores en campo:
+- Capataces y Maestros de Obra: Tienen la obligación de asegurar que su cuadrilla cumpla estrictamente los PETS y las disposiciones del RISST. Verifican el diligenciamiento obligatorio de las listas de chequeo pre-uso (check list) de herramientas manuales, eléctricas, andamios y maquinaria pesada antes del inicio de labores, reportando inmediatamente al Jefe de Frente o Especialista SSOMA cualquier acto o condición subestándar identificada en su entorno.
+- Trabajadores (Colaboradores Directos): Asumen el compromiso del autocuidado, cumpliendo con las señalizaciones y PETS aplicables. Emplean de forma correcta, obligatoria y permanente los EPP asignados, cuidan las protecciones colectivas, participan activamente en las capacitaciones, charlas de 10 minutos y simulacros. Ejercen responsablemente su derecho de negativa a realizar un trabajo inseguro (SSOMA-PO-002) cuando detecten riesgos no controlados que amenacen su vida o la de sus compañeros.
+- Subcontratistas: Deben someterse al proceso previo de homologación en SSOMA antes del ingreso a obra. Cumplen íntegramente el Plan SSOMA de ACG S.A.C., presentan sus SCTR actualizados (Salud y Pensión), EMOs aptos de todo su personal, dotan de EPP certificados, gestionan adecuadamente sus residuos peligrosos/no peligrosos y participan obligatoriamente en las inducciones y reuniones de coordinación de seguridad.`,
+
+  "7.4. Responsabilidades del Personal de Supervisión y Mandos Intermedios":`- El personal de mandos intermedios (jefes de grupo, asistentes de campo, supervisores junior y coordinadores de especialización) constituye la línea directa de enlace operativo entre la planificación técnica y la ejecución física en la Sede ICPNA Lima Norte. Sus responsabilidades comprenden:
+- Coordinación Operativa en Campo: Verificar permanentemente que las condiciones operativas de los frentes asignados se mantengan dentro de los parámetros de seguridad normados antes y durante la ejecución de las tareas cotidianas.
+- Exigencia Rigurosa de Permisos: Constatar que ningún trabajo de alto riesgo (altura, caliente, excavación, espacio confinado, izaje) inicie sin la expedición física y validación del PETAR correspondiente en el punto de trabajo.
+- Control de Riesgos Específicos: Identificar de forma proactiva interferencias físicas, riesgos cruzados entre contratistas o variaciones climáticas que puedan alterar las condiciones de seguridad, disponiendo la corrección inmediata de las desviaciones antes de proseguir con las labores.`,
+
+  "7.5. Responsabilidades del Área de Recursos Humanos / Administración":`- El área de Recursos Humanos y Administración de ACG S.A.C. desempeña una función estratégica en el soporte documental, legal y de bienestar de la gestión preventiva, siendo directamente responsable de:
+- Gestión Contractual y Legal: Asegurar que todo el personal contratado cuente con contrato laboral formal alineado a la legislación vigente y que se verifique la habilitación documental requerida antes de su asignación a la obra.
+- Aseguramiento Social (SCTR y Vida Ley): Verificar e implementar la cobertura obligatoria e ininterrumpida del Seguro Complementario de Trabajo de Riesgo (SCTR Salud y SCTR Pensión) para el 100% de los trabajadores desde el primer día de labor, así como la vigencia de la póliza de Seguro de Vida Ley.
+- Control Logístico de EPP y Registros: Coordinar oportunamente la compra, almacenamiento y stock de contingencia de EPP normados de acuerdo con las especificaciones técnicas provistas por SSOMA, archivando los cargos firmados de entrega de equipos y los registros de inducciones generales.`,
+
+  "7.6. Responsabilidades de los Responsables de Frente y Encargados de Obra":`- Los ingenieros de frente y encargados generales de edificación y demolición son los líderes operativos de las fases constructivas en el proyecto ICPNA Lima Norte, debiendo asumir formalmente:
+- Supervisión Permanente de Procesos Críticos: Ejercer el control técnico continuo en los frentes de trabajo de alta complejidad (demolición de estructuras, vaciado de concreto en altura, excavaciones profundas y apuntalamientos), garantizando la correcta secuencia de ingeniería aprobada.
+- Asignación de Frentes Seguros: Planificar la distribución de cuadrillas asegurando que las áreas de trabajo cuenten con accesos ordenados, iluminación adecuada, orden y limpieza permanente y protecciones colectivas instaladas antes del posicionamiento del personal.
+- Coordinación Estrecha con SSOMA: Mantener comunicación fluida con la Jefatura SSOMA para programar con anticipación las actividades de alto riesgo, facilitando la presencia de supervisión dedicada y autorizando la paralización de trabajos cuando se detecten condiciones fuera de control.`,
+
+  "7.7. Responsabilidades de los Trabajadores en Materia de SST":`- En cumplimiento explícito del Artículo 79 de la Ley N° 29783, los colaboradores de ACG S.A.C. asignados al proyecto ICPNA Sede Lima Norte se obligan de manera personal y directa a:
+- Cooperación y Cumplimiento Normativo: Cumplir estrictamente las instrucciones, reglamentos, PETS y señaléticas preventivas de la obra, manteniendo una conducta responsable y orientada al autocuidado y la protección de sus compañeros.
+- Participación Activa en Capacitaciones: Asistir de forma obligatoria a la inducción general, capacitaciones específicas, charlas de 10 minutos y simulacros de emergencia programados, rindiendo las evaluaciones correspondientes.
+- Reporte de Eventos e Incidentes: Reportar inmediatamente a su capataz, supervisor o especialista SSOMA la ocurrencia de cualquier incidente, condición peligrosa o daño en los equipos de protección, colaborando activamente en las investigaciones posteriores.`,
+
+  "7.8. Responsabilidades de Contratistas y Subcontratistas":`- De acuerdo con el Artículo 68 de la Ley N° 29783, la contratación de empresas subcontratistas no exime a estas de su responsabilidad directa en la prevención de riesgos de su personal. Dichas empresas se obligan a:
+- Autonomía y Coordinación Preventiva: Gestionar su propio sistema preventivo alineado formalmente con el Plan SSOMA de ACG S.A.C., designando supervisión dedicada de SST de acuerdo con la cantidad de trabajadores desplegados en obra.
+- Presentación de Planes Específicos y Documentación: Entregar de forma previa al inicio de actividades sus Planes Específicos de SST, Matrices IPERC de sus procesos, PETS adaptados, pólizas de SCTR (Salud y Pensión) vigentes y Certificados de Aptitud Médica (EMO) aptos de todo su personal.
+- Cumplimiento Riguroso en Campo: Garantizar la dotación de EPP normados a sus trabajadores, participar en las inducciones de obra y acatar las paralizaciones o sanciones dispuestas por la Jefatura SSOMA de ACG S.A.C. ante desvíos de seguridad.`,
+
+  "7.9. Responsabilidades de Proveedores y Terceros":`- Los proveedores de materiales, insumos, maquinaria o servicios de transporte que ingresen a los predios de la obra ICPNA Sede Lima Norte deben acatar rigurosamente las siguientes normas:
+- Tránsito Interno y Control de Velocidad: Respetar estrictamente los límites de velocidad (máximo 10 km/h), señalizaciones vehiculares y rutas peatonales establecidas en la obra, manteniendo balizas y alarmas de retroceso operativas en sus vehículos.
+- Uso de EPP Obligatorio: Portar y emplear permanentemente los Equipos de Protección Personal básicos (casco de seguridad, calzado con puntera de acero, chaleco reflectivo y lentes de seguridad) desde el momento de su ingreso al recinto.
+- Restricción de Circulación: Queda estrictamente prohibido el tránsito o ingreso de transportistas o proveedores a frentes de trabajo críticos, zonas de demolición o excavación sin autorización expresa y escolta del área logística o de SSOMA.`,
+
+  "7.10. Responsabilidades de Visitantes dentro de las Instalaciones":`- Toda persona ajena al proceso constructivo (representantes de entidades públicas, inspectores del cliente ICPNA, auditorías externas o visitas corporativas) que requiera ingresar a la obra debe cumplir las siguientes disposiciones:
+- Registro Indispensable en Garita: Registrarse obligatoriamente en el libro de visitas de garita de control, presentando documento de identidad y acreditando la póliza SCTR correspondiente.
+- Inducción Express de Seguridad: Recibir de forma obligatoria la "Inducción Express de Seguridad para Visitantes" impartida por el personal de SSOMA, donde se informan los riesgos principales del proyecto, rutas de evacuación y zonas seguras.
+- Uso de EPP de Visita y Escolta Permanente: Portar la indumentaria de seguridad provista (casco, chaleco, lentes y barbiquejo) y mantenerse en todo momento acompañado por un funcionario autorizado de ACG S.A.C., prohibiéndose deambular independientemente por la obra.`
+},
+
+"Capacitaciones":{
+  "8. CAPACITACIONES EN SEGURIDAD Y SALUD EN EL TRABAJO": buildCapacitacionesIntroHtml(),
+
+  "8.1. Programa de inducción general y específica":`La inducción constituye el proceso inicial de orientación y capacitación que permite proporcionar al trabajador los conocimientos necesarios sobre las condiciones de seguridad y salud en el trabajo antes de incorporarse a sus actividades. Será obligatoria para todo trabajador que ingrese a la obra, independientemente de su modalidad de contratación o función. La empresa desarrollará dos modalidades de inducción:
+
+a) Inducción general
+Estará dirigida a proporcionar información sobre los lineamientos generales de SST de la empresa y las condiciones de seguridad establecidas para la ejecución del proyecto. Comprenderá, como mínimo:
+- Política y objetivos de Seguridad, Salud en el Trabajo y Medio Ambiente (SSOMA).
+- Reglamento Interno de Seguridad y Salud en el Trabajo (RISST) y disposiciones aplicables.
+- Derechos, obligaciones y responsabilidades de los trabajadores en materia de SST.
+- Identificación de los principales peligros y riesgos presentes en la obra.
+- Normas generales de seguridad, orden y limpieza en las instalaciones.
+- Uso, cuidado, conservación y reposición de los equipos de protección personal.
+- Procedimientos de comunicación y reporte de incidentes, accidentes y condiciones inseguras.
+- Actuación ante situaciones de emergencia, incluyendo incendios, sismos y accidentes de trabajo.
+
+b) Inducción específica
+Estará orientada a informar al trabajador sobre los peligros, riesgos y controles relacionados directamente con el puesto, área y actividades que desarrollará. Se realizará considerando las características particulares de cada tarea y deberá comprender:
+- Descripción de las funciones y actividades asignadas al trabajador.
+- Identificación de peligros y evaluación de riesgos mediante el IPERC correspondiente.
+- Revisión de los procedimientos escritos de trabajo seguro (PETS) y ATS aplicables.
+- Medidas de prevención y control para las actividades de construcción y trabajos de alto riesgo.
+- Uso correcto de herramientas, equipos, maquinaria y materiales.
+- Selección y utilización adecuada de los EPP requeridos.
+- Restricciones, prohibiciones y condiciones que obligan a detener una actividad.
+- Procedimientos de respuesta ante emergencias relacionadas con las tareas asignadas.`,
+
+  "8.2. Charlas diarias de 10 minutos":`Las charlas diarias de seguridad constituyen una actividad de sensibilización y comunicación preventiva que tiene como finalidad reforzar los conocimientos de los trabajadores sobre los peligros, riesgos y medidas de control aplicables a las actividades que desarrollarán durante la jornada. Estas charlas se realizarán antes del inicio de los trabajos y estarán dirigidas a todo el personal involucrado en las actividades de la obra. Serán lideradas por el supervisor de SST, responsable SSOMA, supervisor de campo o personal designado, considerando las condiciones reales del área y las actividades programadas para el día.
+
+Durante las charlas se abordarán, según corresponda, los siguientes aspectos:
+- Riesgos de las actividades programadas: Comunicar los peligros y riesgos asociados a los trabajos que se ejecutarán durante la jornada, incluyendo actividades simultáneas y posibles interferencias.
+- Medidas de prevención y control: Reforzar las acciones que deberán aplicarse para evitar accidentes, verificando que los trabajadores conozcan sus responsabilidades y restricciones.
+- Uso adecuado de EPP: Recordar la importancia de utilizar correctamente los equipos de protección personal, verificando que sean los apropiados para cada actividad y se encuentren en buen estado.
+- Condiciones del área de trabajo: Informar sobre las condiciones del entorno, orden y limpieza, señalización, accesos, superficies de trabajo y posibles situaciones inseguras.
+- Trabajos de alto riesgo: Reforzar las precauciones para actividades como trabajos en altura, trabajos en caliente, operaciones de izaje, trabajos eléctricos y otras tareas críticas.
+- Condiciones ambientales: Comunicar las condiciones climáticas y ambientales que puedan afectar la seguridad, como lluvia, viento, polvo, iluminación deficiente o temperaturas elevadas.
+- Reporte de incidentes y condiciones inseguras: Promover que los trabajadores comuniquen oportunamente cualquier situación que pueda ocasionar accidentes o afectar su integridad física.
+- Aptitud para el trabajo: Recordar la importancia de iniciar las actividades en condiciones físicas y mentales adecuadas, comunicando cualquier situación que pueda comprometer la ejecución segura de las tareas.
+
+Las charlas deberán desarrollarse de manera clara, participativa y utilizando ejemplos relacionados con las actividades de construcción, permitiendo que los trabajadores comprendan los riesgos y las medidas preventivas que deben aplicar.`,
+
+  "8.3. Matriz de capacitación, reentrenamiento y evaluación":`La empresa, a través de la Jefatura SSOMA, administrará una matriz de capacitación que permitirá identificar, organizar y controlar las necesidades de formación del personal, considerando las funciones desempeñadas, los peligros y riesgos asociados a cada puesto y los requisitos de capacitación establecidos en la normativa vigente.
+La matriz constituirá una herramienta de planificación y seguimiento que permitirá verificar que los trabajadores reciban la formación necesaria para desarrollar sus actividades de manera segura.
+
+Para su elaboración y actualización se considerarán los siguientes aspectos:
+- Identificación de necesidades de capacitación: Determinar los conocimientos y competencias que requiere cada puesto de trabajo, considerando las actividades ejecutadas y los riesgos a los que se encuentra expuesto el personal.
+- Clasificación por puesto y actividad: Organizar las capacitaciones según las funciones del personal administrativo, técnico, operativo, supervisores y trabajadores que desarrollen actividades de alto riesgo.
+- Planificación de capacitaciones: Establecer los temas, responsables, fechas y periodicidad de las actividades formativas, considerando los requisitos legales y las necesidades identificadas.
+- Reentrenamiento del personal: Programar capacitaciones adicionales cuando se detecten deficiencias en el desempeño, incumplimientos de los procedimientos, accidentes, incidentes o cambios en las condiciones de trabajo.
+- Actualización de conocimientos: Reforzar la formación cuando se incorporen nuevos equipos, herramientas, tecnologías, materiales o procedimientos que impliquen nuevos peligros o riesgos.
+- Evaluación del aprendizaje: Verificar la comprensión de los temas mediante evaluaciones escritas, preguntas orales, demostraciones prácticas u otros mecanismos adecuados al tipo de capacitación.
+- Seguimiento de cumplimiento: Registrar las capacitaciones realizadas, identificar al personal pendiente de formación y programar las actividades necesarias para cerrar las brechas identificadas.
+
+Asimismo, se deberá considerar la capacitación de los trabajadores que retornen después de periodos de ausencia cuando existan cambios en sus funciones, condiciones de trabajo o procedimientos que requieran actualización de conocimientos.`,
+
+  "8.4. Programa anual de capacitación en SST":`El Programa Anual de Capacitación en SST (Anexo 2 del presente Plan) establecerá la planificación de las actividades de formación, entrenamiento y sensibilización que se desarrollarán durante la ejecución del proyecto, con la finalidad de fortalecer las competencias preventivas de los trabajadores y garantizar el cumplimiento de las obligaciones legales aplicables. El programa contempla la realización de un mínimo de cuatro (04) capacitaciones al año en materia de SST, conforme al artículo 35 de la Ley N.° 29783, desarrolladas dentro de la jornada laboral. Los temas serán seleccionados considerando los peligros y riesgos existentes, las características de las actividades constructivas y las necesidades de formación del personal.
+
+Para su elaboración se considerarán los siguientes criterios:
+- Identificación de temas prioritarios: Seleccionar los contenidos de capacitación en función de los riesgos del proyecto, las actividades constructivas y los resultados de las inspecciones, investigaciones de accidentes y evaluaciones de desempeño.
+- Planificación mensualizada: Establecer un cronograma mediante un diagrama Gantt que permita organizar las capacitaciones, fechas de ejecución, responsables y personal participante.
+- Contenido teórico y práctico: Combinar conocimientos técnicos con demostraciones y ejercicios prácticos que permitan aplicar las medidas de prevención durante las actividades.
+- Capacitación en trabajos de alto riesgo: Incluir formación sobre trabajos en altura, trabajos en caliente, excavaciones, izaje de cargas, trabajos eléctricos, espacios confinados y otras actividades críticas que se desarrollen en la obra.
+- Preparación y respuesta ante emergencias: Incorporar temas relacionados con primeros auxilios, prevención de incendios, evacuación, uso de extintores y actuación ante situaciones de emergencia.
+- Personal responsable de la formación: Las capacitaciones serán impartidas por profesionales con competencia y experiencia en la materia, pudiendo participar especialistas internos o externos.
+- Participación del personal: Garantizar que los trabajadores propios, contratistas y subcontratistas reciban las capacitaciones que correspondan según sus funciones y riesgos laborales.
+- Evaluación de resultados: Verificar la comprensión de los temas desarrollados y la aplicación de los conocimientos adquiridos en las actividades diarias.
+
+El programa será elaborado por la Jefatura SSOMA, revisado por la Residencia de Obra y puesto en conocimiento del Subcomité o Comité de SST, según corresponda. Su cumplimiento será objeto de seguimiento periódico, considerando el indicador proactivo de porcentaje de cumplimiento del Programa de Capacitación (% CC). Se establecerá como meta de gestión alcanzar el 100 % de cumplimiento de las capacitaciones programadas. En caso de presentarse incumplimientos o reprogramaciones, se deberán identificar las causas y establecer las acciones necesarias para garantizar su ejecución.`,
+
+  "8.5. Capacitación en identificación de peligros, evaluación de riesgos y controles":`El personal recibirá capacitación en identificación de peligros, evaluación de riesgos y determinación de controles (IPERC), con la finalidad de desarrollar las competencias necesarias para reconocer las condiciones peligrosas presentes en el área de trabajo, evaluar sus posibles consecuencias y aplicar las medidas preventivas correspondientes.
+La capacitación estará orientada a que los trabajadores comprendan la importancia de la prevención y participen activamente en la identificación de peligros y el control de los riesgos asociados a sus actividades.
+
+Los contenidos comprenderán los siguientes aspectos:
+- Conceptos básicos de SST: Diferenciar los conceptos de peligro, riesgo, incidente, accidente de trabajo y medida de control, mediante ejemplos relacionados con las actividades de construcción.
+- Identificación de peligros: Reconocer fuentes, situaciones y condiciones que puedan ocasionar lesiones o afectar la salud, como trabajos en altura, electricidad, herramientas, maquinaria, materiales y sustancias peligrosas.
+- Evaluación de riesgos: Comprender cómo se determina el nivel de riesgo considerando la probabilidad de ocurrencia y la severidad de las posibles consecuencias.
+- Elaboración y revisión del IPERC: Conocer la metodología utilizada para identificar peligros, evaluar riesgos y establecer controles en las diferentes actividades del proyecto.
+- Análisis de Trabajo Seguro (ATS): Capacitar al personal en la identificación de peligros por etapas de trabajo y en la determinación de medidas preventivas antes de iniciar las actividades.
+- Jerarquía de controles: Aplicar el orden de prioridad de las medidas preventivas: eliminación, sustitución, controles de ingeniería, controles administrativos y equipos de protección personal.
+- Implementación de medidas de control: Reconocer la importancia de cumplir los controles establecidos en los procedimientos, permisos de trabajo y documentos de gestión de SST.
+- Identificación de condiciones inseguras: Desarrollar la capacidad de reconocer situaciones que puedan ocasionar accidentes, comunicarlas oportunamente y solicitar la intervención del responsable correspondiente.
+- Actualización de la evaluación de riesgos: Reconocer la necesidad de revisar el IPERC cuando cambien las condiciones del área, los procedimientos, equipos, materiales o actividades programadas.
+
+Asimismo, se promoverá la participación de los trabajadores en la identificación de peligros y comunicación de riesgos durante las actividades diarias, permitiendo actualizar los controles cuando las condiciones reales del trabajo así lo requieran. La capacitación será reforzada mediante charlas, ejercicios prácticos y revisión de situaciones reales observadas en la obra, verificando que el personal comprenda la aplicación de las medidas preventivas en sus actividades.`
+},
+
+"PETS y PETAR":{
+  "9. PROCEDIMIENTOS DE TRABAJO EN SST":`ACG SAC, a través del Especialista SSOMA, elaborará, actualizará e implementará los estándares y procedimientos escritos de trabajo seguro (PETS) aplicables para el proyecto y/o instalación con la participación de los trabajadores que realizan dichas labores. Para ello, se utilizarán los formatos para la elaboración de estándares y para la elaboración de los PETS; se pondrán a disposición de los trabajadores y se les brindará instrucción para su uso obligatorio en sus respectivas labores y áreas de trabajo. Los estándares de trabajo y los procedimientos escritos de trabajo seguro serán explicados a los trabajadores asegurando su entendimiento y su puesta en práctica. Para realizar actividades no rutinarias o no identificadas en el IPERC de Línea Base y que no cuente con un PETS, se deberá implementar el Análisis de Trabajo Seguro (ATS). El Especialista SSOMA brindará la asistencia requerida para estos fines.`,
+
+  "9.1. Estándares y Permisos de Alto Riesgo (PETAR)":`Los Permisos de Trabajo de Alto Riesgo (PETAR) constituyen una herramienta de control preventivo destinada a verificar que las condiciones de seguridad necesarias para ejecutar una actividad crítica hayan sido evaluadas y controladas antes de su inicio. Este documento permite autorizar formalmente la ejecución de trabajos que presentan riesgos significativos, estableciendo las condiciones, restricciones y medidas de seguridad que deberán cumplirse durante su desarrollo.
+La empresa implementará un sistema de permisos de trabajo para aquellas actividades que, debido a sus características, puedan generar consecuencias graves para los trabajadores, terceros, instalaciones o equipos.
+
+Antes de iniciar una actividad sujeta a PETAR, se deberá verificar como mínimo:
+- Identificación de la actividad y ubicación del trabajo: Precisar el tipo de actividad que se realizará, el área de intervención y el periodo previsto de ejecución.
+- Identificación de peligros y evaluación de riesgos: Reconocer los peligros asociados a la actividad y determinar los riesgos que podrían afectar la seguridad y salud de los trabajadores.
+- Revisión del IPERC correspondiente: Verificar que los peligros y riesgos identificados cuenten con medidas de prevención y control establecidas.
+- Elaboración y revisión del ATS: Analizar las etapas de ejecución del trabajo, identificando los peligros específicos y controles que deberán aplicarse.
+- Disponibilidad y cumplimiento del PETS aplicable: Contar con el procedimiento correspondiente y asegurar que los trabajadores conozcan la secuencia segura de ejecución.
+- Personal competente y autorizado: Comprobar que los trabajadores cuenten con la capacitación, experiencia y autorización requeridas para desarrollar la actividad.
+- Inspección previa del área de trabajo: Verificar las condiciones del entorno, accesos, superficies, instalaciones y posibles interferencias que puedan representar un peligro.
+- Verificación del estado de herramientas, equipos y maquinaria: Comprobar que se encuentren operativos, sean adecuados para la actividad y cuenten con sus dispositivos de seguridad.
+- Implementación de controles colectivos e individuales: Asegurar la disponibilidad y correcta instalación de las medidas de protección necesarias, priorizando los controles colectivos y complementándolos con el uso de EPP.
+- Delimitación y señalización del área: Establecer zonas de trabajo y áreas restringidas mediante barreras, cintas y señales de seguridad para evitar la exposición de personal ajeno a la actividad.
+- Disponibilidad de equipos de emergencia y rescate: Verificar que se cuente con extintores, botiquines, equipos de rescate y otros recursos necesarios, según los riesgos identificados.
+- Condiciones ambientales adecuadas para la ejecución: Evaluar factores como lluvia, viento, iluminación, ventilación y otras condiciones que puedan comprometer la seguridad.
+- Comunicación de los riesgos y controles a los trabajadores: Informar al personal involucrado sobre las condiciones del trabajo, medidas preventivas, restricciones y acciones que deberán adoptarse ante una situación insegura.
+
+El PETAR deberá ser aprobado por el responsable autorizado de SST y/o por el responsable designado por la empresa, de acuerdo con el procedimiento interno establecido, antes del inicio de la actividad. El permiso tendrá una vigencia limitada a las condiciones, ubicación y periodo establecidos, debiendo renovarse o revalidarse cuando corresponda.
+El trabajo deberá detenerse y evaluarse cuando se produzcan cambios en las condiciones inicialmente autorizadas, ocurra un incidente, se modifique el método de trabajo, cambie el personal responsable o se presenten condiciones ambientales que incrementen el riesgo. La actividad solo podrá reanudarse después de verificar que se hayan restablecido las condiciones de seguridad y obtenido las autorizaciones correspondientes.
+
+Entre las actividades que podrán requerir PETAR, según la evaluación de riesgos del proyecto y la normativa aplicable, se consideran:
+- Trabajos en altura.
+- Trabajos en caliente.
+- Trabajos eléctricos.
+- Excavaciones y zanjas.
+- Operaciones de izaje.
+- Trabajos en espacios confinados, cuando corresponda.
+- Demoliciones y desmontajes de riesgo.
+- Otras actividades que la evaluación de riesgos determine como críticas.
+
+Los permisos deberán conservarse como evidencia de control y formar parte de los registros de SST del proyecto, permitiendo verificar las autorizaciones otorgadas, las condiciones establecidas y el cumplimiento de las medidas preventivas.`,
+
+  "9.2. Procedimientos Escritos de Trabajo Seguro (PETS)":`Los Procedimientos Escritos de Trabajo Seguro (PETS) establecerán la metodología segura para ejecutar las actividades desarrolladas durante la obra, definiendo de manera ordenada los pasos de trabajo, peligros asociados, riesgos y controles preventivos. Estos documentos tendrán como finalidad orientar a los trabajadores sobre la forma correcta de realizar sus tareas, evitando improvisaciones y reduciendo la exposición a condiciones peligrosas.
+Los PETS serán elaborados considerando las características reales del proyecto, los equipos utilizados, las condiciones del lugar y las competencias requeridas para cada actividad.
+
+Cada PETS deberá contener, según corresponda:
+1. Objetivo: Establecer la finalidad del procedimiento y los aspectos de seguridad que se busca garantizar.
+2. Alcance: Determinar las actividades, áreas y personal a los que será aplicable el procedimiento.
+3. Responsabilidades: Definir las funciones del supervisor, responsable de SST y trabajadores involucrados.
+4. Definiciones: Precisar los términos técnicos y conceptos necesarios para facilitar la comprensión del procedimiento.
+5. Equipos, herramientas y materiales: Identificar los recursos necesarios para ejecutar correctamente la actividad.
+6. Equipos de protección personal requeridos: Especificar los EPP que deberán utilizarse de acuerdo con los peligros y riesgos identificados.
+7. Peligros y riesgos asociados: Describir las fuentes o situaciones peligrosas y los posibles daños que podrían ocasionar.
+8. Medidas de control: Establecer las acciones preventivas y de protección necesarias para evitar o reducir los riesgos.
+9. Secuencia segura de trabajo: Describir ordenadamente las etapas de ejecución, indicando las precauciones que deberán adoptarse en cada una.
+10. Restricciones y prohibiciones: Señalar las condiciones bajo las cuales no se permitirá iniciar o continuar la actividad.
+11. Actuación frente a emergencias: Establecer las acciones básicas que deberán seguirse ante incidentes, accidentes u otras situaciones de emergencia.
+12. Registros y documentos relacionados: Identificar los formatos, permisos, inspecciones y demás documentos vinculados con el procedimiento.
+
+Los PETS serán difundidos y explicados a los trabajadores antes de realizar la actividad, verificando que comprendan los pasos de trabajo, los peligros existentes y las medidas preventivas establecidas. La capacitación y difusión deberán quedar registradas mediante los formatos correspondientes de la empresa.
+
+Entre los principales PETS que podrán implementarse durante la ejecución del proyecto se consideran:
+- Trabajos en altura.
+- Instalación y uso de andamios.
+- Uso de escaleras.
+- Trabajos en caliente.
+- Instalaciones eléctricas.
+- Excavaciones y zanjas.
+- Operaciones de izaje.
+- Uso de herramientas eléctricas y manuales.
+- Operación de maquinaria pesada.
+- Demolición y desmontaje.
+- Trabajos con concreto.
+- Encofrado y desencofrado.
+- Acero y habilitado.
+- Movimiento interno de materiales.
+- Trabajos en espacios confinados, cuando corresponda.
+
+Los PETS deberán revisarse y actualizarse cuando existan modificaciones en los procesos, equipos, materiales, condiciones del proyecto o cuando se identifique la necesidad de mejorar los controles existentes. Asimismo, cualquier modificación deberá comunicarse oportunamente al personal involucrado antes de su aplicación.`,
+
+  "9.3. Análisis de Trabajo Seguro (ATS)":`El Análisis de Trabajo Seguro (ATS) será utilizado como herramienta preventiva para identificar los peligros presentes en una actividad específica y establecer controles antes y durante su ejecución. Este análisis permitirá evaluar las condiciones reales del área de trabajo, reconocer posibles situaciones de riesgo y determinar las medidas necesarias para desarrollar las tareas de manera segura.
+El ATS deberá realizarse con la participación de los trabajadores involucrados y bajo la orientación del responsable de la actividad o supervisor correspondiente, quienes deberán conocer los peligros y medidas de control establecidos.
+
+Como mínimo, el ATS deberá considerar:
+- Actividad a realizar: Descripción clara del trabajo que se ejecutará y sus principales etapas.
+- Área y ubicación: Identificación del lugar específico donde se desarrollará la actividad, considerando las condiciones del entorno.
+- Personal involucrado: Identificación de los trabajadores participantes y responsables de supervisar la ejecución.
+- Secuencia de trabajo: Descripción ordenada de los pasos necesarios para desarrollar la actividad.
+- Peligros identificados: Reconocimiento de las fuentes, situaciones o condiciones que pueden ocasionar daños durante cada etapa.
+- Riesgos asociados: Identificación de los posibles eventos que podrían producirse como consecuencia de la exposición a los peligros.
+- Consecuencias potenciales: Determinación de las posibles lesiones, enfermedades o daños que podrían generarse.
+- Medidas de control: Establecimiento de acciones preventivas y correctivas para eliminar los peligros o reducir los riesgos identificados.
+- EPP requerido: Identificación de los equipos de protección personal necesarios para proteger a los trabajadores durante la ejecución.
+- Herramientas y equipos necesarios: Relación de los equipos, máquinas, herramientas y accesorios que serán utilizados, verificando sus condiciones de seguridad.
+- Condiciones especiales del trabajo: Consideración de factores adicionales como trabajos simultáneos, condiciones climáticas, interferencias, espacios reducidos o presencia de energías peligrosas.
+- Firma de los trabajadores participantes: Constancia de que el personal involucrado ha participado en la revisión y difusión del análisis.
+- Firma del responsable de la actividad y/o supervisor correspondiente: Validación de la revisión del ATS y de las condiciones necesarias para iniciar el trabajo.
+
+El ATS deberá elaborarse y revisarse antes del inicio de las actividades y actualizarse cuando se presenten modificaciones en la secuencia de trabajo, condiciones del entorno, personal involucrado o peligros inicialmente identificados. Asimismo, si durante la ejecución se detectan peligros no contemplados o condiciones que comprometan la seguridad, los trabajos deberán detenerse hasta evaluar la situación, establecer los controles adicionales y comunicar las modificaciones a todos los trabajadores involucrados.`,
+
+  "9.4. Estándares de seguridad para actividades críticas":`La empresa establecerá estándares específicos para las actividades consideradas críticas debido a sus potencial de generar accidentes graves, lesiones incapacitantes o consecuencias significativas para la seguridad y salud de los trabajadores. Se consideran actividades críticas aquellas tareas que, por los peligros y riesgos asociados a su ejecución, requieren medidas de control específicas y supervisión para garantizar condiciones de trabajo seguras.
+Estos estándares serán de cumplimiento obligatorio para trabajadores propios, contratistas y subcontratistas.
+
+Las actividades críticas deberán ejecutarse considerando como mínimo:
+- IPERC aplicable: Identificación de peligros, evaluación de riesgos y determinación de controles, considerando las características de la actividad, las condiciones del entorno y los posibles cambios durante su ejecución.
+- PETS correspondiente: Procedimiento Escrito de Trabajo Seguro que establece la secuencia de ejecución de las actividades, los peligros asociados y las medidas preventivas que deberán cumplir los trabajadores.
+- ATS previo al trabajo: Análisis de Trabajo Seguro que permite identificar los peligros y riesgos de cada etapa de la tarea, estableciendo los controles necesarios antes de iniciar las actividades.
+- PETAR cuando corresponda: Permiso Escrito de Trabajo de Alto Riesgo que autoriza la ejecución de determinadas actividades, previa verificación de los requisitos y condiciones de seguridad establecidos.
+- Personal capacitado y autorizado: Los trabajadores deberán contar con los conocimientos, entrenamiento y competencias necesarias para desarrollar las actividades de manera segura, de acuerdo con sus funciones y responsabilidades.
+- Inspección de equipos y herramientas: Verificar previamente que los equipos, herramientas, máquinas y accesorios se encuentren en buen estado, sean adecuados para el trabajo y cuenten con sus respectivos dispositivos de seguridad.
+- Implementación de controles colectivos: Priorizar medidas de protección que permitan eliminar o reducir la exposición a los peligros, como barandas, barreras físicas, plataformas, sistemas de ventilación y aislamiento de áreas.
+- Uso de EPP: Proporcionar y verificar el uso correcto de los equipos de protección personal, asegurando que sean adecuados para los riesgos de cada actividad y que se encuentren en buenas condiciones.
+- Señalización y delimitación: Identificar y restringir las áreas de trabajo mediante señales, cintas, conos o barreras, evitando el ingreso de personal no autorizado y la exposición a peligros.
+- Supervisión durante la ejecución: Verificar el cumplimiento de los procedimientos, permisos y medidas de control, identificando y corrigiendo oportunamente los actos y condiciones subestándares.
+- Preparación para situaciones de emergencia: Establecer medidas de respuesta ante posibles emergencias, verificando la disponibilidad de equipos, medios de comunicación, personal capacitado y procedimientos de evacuación y rescate, según corresponda.
+
+9.4.1. Trabajos en altura
+Los trabajos en altura deberán ejecutarse bajo condiciones que garanticen la protección de los trabajadores frente al riesgo de caídas a distinto nivel. Previamente al inicio de las actividades, se evaluarán las condiciones del área, los accesos, las superficies de trabajo y los sistemas de protección contra caídas que serán empleados.
+Se implementarán sistemas de protección colectiva y personal, priorizando aquellos que permitan eliminar o reducir la exposición al riesgo de caída. Asimismo, se verificará que los equipos y estructuras utilizados para acceder o desarrollar los trabajos se encuentren en condiciones seguras.
+Medidas de prevención y control:
+- Evaluación previa del área: Identificar bordes, aberturas, superficies frágiles, desniveles, obstáculos y cualquier condición que pueda ocasionar caídas durante la ejecución de los trabajos.
+- Inspección de equipos de acceso: Verificar las condiciones de andamios, escaleras, plataformas elevadoras y demás medios de acceso, comprobando su estabilidad, resistencia, correcto montaje y condiciones de utilización.
+- Sistemas de protección contra caídas: Utilizar arnés de cuerpo completo, líneas de anclaje, conectores y dispositivos de anclaje compatibles con el sistema de protección implementado. Verificar que los puntos de anclaje sean adecuados y resistentes.
+- Protección colectiva: Instalar barandas, plataformas de trabajo y sistemas de protección perimetral cuando las condiciones de la actividad lo permitan.
+- Control de herramientas y materiales: Asegurar las herramientas y materiales para evitar su caída desde niveles superiores. No se permitirá arrojar objetos o materiales desde altura.
+- Delimitación del área inferior: Señalizar y restringir el acceso a las zonas expuestas a la caída de objetos o materiales, estableciendo áreas de exclusión.
+- Condiciones ambientales: Evaluar la presencia de lluvia, vientos fuertes, superficies húmedas u otras condiciones que puedan comprometer la estabilidad y seguridad del trabajador.
+- Preparación ante emergencias: Disponer de un procedimiento y medios de rescate para atender oportunamente una eventual caída con suspensión del trabajador.
+
+9.4.2. Trabajos en caliente
+Los trabajos en caliente, tales como soldadura, oxicorte, esmerilado y actividades que generen llamas abiertas, chispas o temperaturas elevadas, deberán realizarse previa evaluación de riesgos y autorización correspondiente mediante el PETAR, cuando aplique.
+Antes de iniciar las actividades, se inspeccionará el área para identificar y retirar materiales combustibles o inflamables. Se deberán establecer controles para prevenir incendios, quemaduras, proyección de partículas y exposición a humos metálicos, garantizando que los equipos y herramientas se encuentren en condiciones adecuadas de funcionamiento.
+Medidas de prevención y control:
+- Inspección del área: Identificar materiales combustibles, sustancias inflamables, residuos, polvo acumulado y otros elementos que puedan favorecer la generación de incendios.
+- Acondicionamiento del área: Retirar los materiales combustibles o protegerlos mediante mantas ignífugas, barreras u otros elementos resistentes al fuego, cuando corresponda.
+- Control de fuentes de ignición: Evitar que las chispas, escorias o partículas calientes alcancen materiales combustibles, instalaciones eléctricas u otras zonas expuestas.
+- Inspección de equipos: Revisar máquinas de soldar, esmeriles, discos de corte, cables, conexiones, mangueras, reguladores y demás accesorios antes de su utilización.
+- Disponibilidad de extintores: Contar con extintores operativos, accesibles y adecuados para los riesgos de incendio identificados en el área.
+- Vigía de fuego: Designar un vigía cuando la evaluación de riesgos lo requiera, quien deberá permanecer atento a la presencia de chispas, focos de ignición o condiciones que puedan originar un incendio.
+- Uso de EPP: Proporcionar careta de soldar, lentes de seguridad, guantes de cuero, ropa de protección, calzado de seguridad y protección respiratoria cuando corresponda.
+- Control de humos y gases: Implementar ventilación natural o mecánica para evitar la acumulación de humos, gases y vapores generados durante la actividad.
+- Verificación posterior: Inspeccionar el área al finalizar los trabajos para descartar la presencia de materiales calientes, brasas o focos de incendio que puedan generar una emergencia.
+
+9.4.3. Trabajos eléctricos
+Los trabajos eléctricos deberán ser ejecutados exclusivamente por personal competente, capacitado y autorizado, de acuerdo con la naturaleza y complejidad de las instalaciones eléctricas involucradas.
+Antes de realizar cualquier intervención, se identificarán las fuentes de energía eléctrica y se evaluarán los riesgos asociados, tales como contacto eléctrico directo o indirecto, electrocución, quemaduras, cortocircuitos y generación de arcos eléctricos. Se priorizará la desenergización de los circuitos y equipos antes de efectuar cualquier intervención.
+Medidas de prevención y control:
+- Identificación de fuentes de energía: Reconocer los circuitos, tableros, equipos e instalaciones que puedan representar un riesgo eléctrico durante la ejecución del trabajo.
+- Desenergización: Desconectar las fuentes de alimentación eléctrica antes de intervenir equipos o instalaciones, siempre que la naturaleza del trabajo lo permita.
+- Bloqueo y etiquetado (LOTO): Aplicar dispositivos de bloqueo y etiquetas de advertencia para evitar la reconexión o energización accidental durante los trabajos.
+- Verificación de ausencia de tensión: Comprobar mediante instrumentos adecuados que el circuito o equipo se encuentre efectivamente desenergizado antes de iniciar la intervención.
+- Inspección de herramientas y equipos: Verificar que las herramientas, extensiones, cables y equipos eléctricos no presenten cortes, empalmes defectuosos, conexiones expuestas o deterioro.
+- Protección de instalaciones: Mantener los tableros eléctricos cerrados, identificados y protegidos contra el acceso de personal no autorizado.
+- Uso de EPP: Utilizar guantes dieléctricos, protección facial, calzado de seguridad y demás elementos de protección de acuerdo con el riesgo eléctrico evaluado.
+- Control del área: Delimitar y señalizar la zona de intervención para evitar el ingreso de personas ajenas a los trabajos.
+- Restablecimiento del servicio: Antes de retirar los bloqueos y energizar nuevamente los equipos, verificar que el personal se encuentre fuera de la zona de peligro, que se hayan retirado las herramientas y que las instalaciones estén en condiciones seguras.
+
+9.4.4. Excavaciones y zanjas
+Antes de realizar excavaciones y zanjas, se deberá efectuar una evaluación de las condiciones del terreno, identificando posibles interferencias con instalaciones subterráneas, tales como redes eléctricas, tuberías de agua, desagüe, gas u otros servicios existentes.
+Se evaluará la estabilidad del terreno, profundidad de la excavación, características del suelo y condiciones del entorno, estableciendo las medidas de protección necesarias para prevenir derrumbes, atrapamientos y caídas al interior de la excavación.
+Medidas de prevención y control:
+- Evaluación del terreno: Determinar las características del suelo, presencia de humedad, filtraciones, vibraciones y condiciones que puedan afectar la estabilidad de las paredes de la excavación.
+- Identificación de instalaciones subterráneas: Revisar planos, realizar verificaciones en campo y localizar las redes de servicios existentes antes de iniciar la excavación.
+- Protección contra derrumbes: Implementar taludes, entibados, apuntalamientos u otros sistemas de protección de acuerdo con las características y profundidad de la excavación.
+- Delimitación y señalización: Instalar barreras físicas, señales de advertencia y elementos de protección para evitar caídas accidentales al interior de zanjas o excavaciones.
+- Accesos y salidas: Habilitar escaleras u otros medios seguros de ingreso y salida, ubicados de manera que permitan una evacuación oportuna.
+- Control de materiales y equipos: Mantener los materiales excavados, herramientas y maquinaria alejados del borde para evitar sobrecargas y desprendimientos del terreno.
+- Control de maquinaria: Establecer distancias de seguridad entre los equipos de excavación y los trabajadores, evitando maniobras que puedan comprometer la estabilidad del terreno.
+- Inspecciones periódicas: Revisar las condiciones de las excavaciones antes de cada jornada y después de lluvias, vibraciones, filtraciones o cualquier modificación del terreno.
+- Control de ingreso: Restringir el ingreso de personal no autorizado y garantizar que los trabajadores conozcan los riesgos y medidas de seguridad establecidos.
+
+9.4.5. Izaje y manipulación de cargas
+Las operaciones de izaje y manipulación de cargas deberán planificarse previamente, considerando las características del material, peso de la carga, capacidad de los equipos, condiciones del terreno y posibles interferencias en el área de trabajo.
+Antes de iniciar las maniobras, se inspeccionarán los equipos y accesorios de izaje, tales como grúas, polipastos, eslingas, grilletes, ganchos y elementos de sujeción, verificando que se encuentren en buen estado y sean adecuados para la carga que se manipulará.
+Medidas de prevención y control:
+- Planificación de maniobras: Determinar el peso, dimensiones, centro de gravedad y características de la carga, así como la trayectoria que seguirá durante su desplazamiento.
+- Verificación de capacidad: Comprobar que los equipos y accesorios de izaje cuenten con capacidad suficiente para soportar la carga, respetando los límites establecidos por el fabricante.
+- Inspección de accesorios: Revisar eslingas, cables, cadenas, ganchos, grilletes y demás elementos de sujeción, verificando que no presenten cortes, deformaciones, desgaste o daños.
+- Personal competente: Garantizar que las operaciones sean dirigidas por personal capacitado y autorizado, contando con señalero o rigger cuando corresponda.
+- Comunicación durante el izaje: Establecer señales y medios de comunicación claros entre el operador del equipo y el personal que dirige la maniobra.
+- Delimitación del área: Establecer zonas de exclusión alrededor de la operación, restringiendo el tránsito de personas ajenas a la actividad.
+- Control de cargas suspendidas: Prohibir la permanencia o tránsito de trabajadores debajo de cargas suspendidas. No se permitirá utilizar las manos para detener cargas que presenten movimientos descontrolados.
+- Estabilidad de la carga: Verificar que la carga se encuentre correctamente equilibrada y asegurada antes de iniciar su elevación o desplazamiento.
+- Manipulación manual: Aplicar técnicas adecuadas de levantamiento, transporte y descenso de cargas, evitando giros bruscos, sobreesfuerzos y posturas forzadas.
+- Condiciones ambientales: Suspender las maniobras cuando el viento, la lluvia o las condiciones del entorno comprometan el control y la estabilidad de la carga.
+
+9.4.6. Uso de herramientas y equipos
+Todas las herramientas manuales, eléctricas y equipos utilizados durante las actividades deberán encontrarse en condiciones adecuadas de funcionamiento y contar con las protecciones de seguridad correspondientes.
+Antes de su utilización, se realizará una inspección para identificar posibles defectos o deterioros que puedan ocasionar cortes, golpes, atrapamientos, proyección de partículas, contactos eléctricos u otros accidentes. Asimismo, se garantizará que cada herramienta sea utilizada para la finalidad prevista por el fabricante.
+Medidas de prevención y control:
+- Inspección previa: Revisar el estado de las herramientas antes de cada uso, verificando mangos, empuñaduras, cables, conexiones, guardas, discos y accesorios.
+- Identificación de herramientas defectuosas: Retirar de servicio las herramientas que presenten fisuras, deformaciones, cables expuestos, piezas sueltas o cualquier condición insegura.
+- Protecciones de seguridad: Verificar que las herramientas eléctricas cuenten con sus guardas, interruptores y dispositivos de protección correspondientes.
+- Uso adecuado: Utilizar cada herramienta exclusivamente para la actividad para la cual fue diseñada, evitando improvisaciones o modificaciones que comprometan su funcionamiento.
+- Control de energía: Desconectar las herramientas eléctricas antes de realizar cambios de accesorios, ajustes, limpieza o mantenimiento.
+- Orden y almacenamiento: Mantener las herramientas en lugares asignados, evitando dejarlas en bordes, plataformas, zonas de tránsito o superficies elevadas donde puedan caer.
+- Control de proyección de partículas: Utilizar lentes de seguridad, caretas faciales y demás protección necesaria durante actividades de corte, esmerilado, perforación y similares.
+- Capacitación: Instruir al personal sobre la operación segura, inspección, mantenimiento básico y almacenamiento de las herramientas.
+- Uso de EPP: Verificar que los trabajadores utilicen los equipos de protección personal correspondientes a los riesgos generados por cada herramienta.
+
+9.4.7. Trabajos con maquinaria pesada
+La operación de maquinaria pesada deberá estar a cargo de operadores capacitados, autorizados y con las competencias necesarias para el tipo de equipo que utilizarán. Antes de iniciar las actividades, se realizará una inspección preoperacional para verificar el estado de los sistemas mecánicos, hidráulicos, eléctricos, frenos, neumáticos, alarmas, luces y demás componentes de seguridad.
+Se deberán establecer controles para prevenir atropellos, choques, volcaduras, atrapamientos y golpes durante la operación, considerando la interacción entre maquinaria, trabajadores y otros equipos presentes en el área.
+Medidas de prevención y control:
+- Inspección preoperacional: Verificar frenos, dirección, neumáticos, sistemas hidráulicos, luces, alarmas de retroceso, bocina, cinturón de seguridad y demás dispositivos de protección.
+- Autorización del operador: Permitir la operación únicamente a personal autorizado y capacitado para el tipo de maquinaria correspondiente.
+- Evaluación del área: Comprobar la estabilidad del terreno, pendientes, condiciones de circulación, obstáculos e interferencias antes de iniciar las maniobras.
+- Delimitación de zonas de trabajo: Establecer áreas de circulación y operación, restringiendo el ingreso de peatones al radio de acción de la maquinaria.
+- Control de puntos ciegos: Utilizar señalero cuando existan limitaciones de visibilidad o maniobras que requieran asistencia para prevenir atropellos y colisiones.
+- Comunicación: Establecer señales de advertencia y comunicación entre operadores, señalero y trabajadores que desarrollen actividades cercanas.
+- Operación segura: Respetar los límites de velocidad, capacidad de carga y condiciones de funcionamiento establecidos por el fabricante.
+- Estacionamiento seguro: Detener la maquinaria en superficies estables, accionar los frenos correspondientes y bajar los implementos al suelo antes de abandonar el equipo.
+- Mantenimiento: Realizar mantenimiento preventivo y correctivo conforme a las recomendaciones del fabricante, registrando las intervenciones efectuadas.
+
+9.4.8. Demolición y desmontaje
+Antes de iniciar actividades de demolición o desmontaje, se realizará una evaluación de las condiciones estructurales del área, identificando los elementos que serán intervenidos, los posibles puntos de inestabilidad y los peligros asociados a la caída de materiales, colapso de estructuras, proyección de partículas y generación de polvo.
+Los trabajos se ejecutarán mediante una secuencia previamente establecida, considerando los métodos de intervención, herramientas y equipos que serán utilizados, así como los mecanismos para retirar y controlar los materiales desmontados.
+Medidas de prevención y control:
+- Inspección previa: Evaluar las condiciones de la estructura, identificando elementos deteriorados, conexiones, puntos de apoyo y componentes que puedan desprenderse durante la intervención.
+- Identificación de servicios: Verificar la presencia de instalaciones eléctricas, tuberías u otros servicios que puedan resultar afectados durante la demolición o desmontaje.
+- Planificación de actividades: Establecer una secuencia de desmontaje que evite retirar elementos que puedan comprometer la estabilidad de la estructura.
+- Control de caída de materiales: Implementar sistemas de sujeción, retención o descenso controlado para evitar la caída descontrolada de elementos desmontados.
+- Delimitación del área: Señalizar y restringir el acceso a las zonas de intervención, especialmente en áreas inferiores expuestas a la caída de objetos y materiales.
+- Control de herramientas y equipos: Inspeccionar los equipos utilizados para corte, perforación, desmontaje y retiro de materiales antes de iniciar las actividades.
+- Control de polvo y partículas: Implementar métodos de humectación, extracción localizada u otros controles adecuados, según las características de los materiales intervenidos.
+- Protección del personal: Utilizar casco, lentes de seguridad, guantes de protección, calzado de seguridad, protección respiratoria y demás EPP acordes con los riesgos identificados.`
+},
+
+"Inspecciones":{
+  "10. INSPECCIONES INTERNAS DE SST":`Son visitas que cumplen un rol de vigilancia a las diferentes áreas de trabajo, a fin de localizar situaciones de riesgo o procesos peligrosos. Las inspecciones permiten detectar y controlar las condiciones fuera de norma en las diferentes áreas de trabajo, a través de inspecciones a equipos, materiales, actividades y ambiente.
+
+Los jefes, miembros del comité de SST, supervisores y/o responsables de área realizarán inspecciones planeadas a todas las labores, instalaciones y proyectos, dando prioridad a las zonas críticas de trabajo, según su mapa de riesgo. El resultado de las inspecciones, con los plazos para las correcciones, será incluido en el Cuadro de seguimiento de observaciones de inspecciones.
+
+El Programa Anual de Inspecciones contiene la frecuencia de las inspecciones a las zonas de trabajo, asociadas a los riesgos y los responsables respectivos. Las inspecciones del Comité de Seguridad y Salud en el Trabajo son realizadas mensualmente a todas las instalaciones de la operación, según el programa de inspecciones planificado por el Comité. El Área de Seguridad, Salud Ocupacional y Medio Ambiente realizará mensualmente la evaluación de los reportes de inspecciones, haciendo un análisis y proponiendo acciones de mejora, las cuales se revisarán en el Comité de Seguridad y Salud en el Trabajo.
+
+FIGURA N° 3: Inspecciones Internas de Seguridad y Salud en el Trabajo
+Nota. Estructura del programa de inspecciones internas del sistema de gestión de SST. Elaboración propia.`,
+
+  "10.1. Inspecciones de pre-uso de vehículos y equipos":`Antes de cada jornada, los operadores realizarán inspecciones de vehículos, maquinaria y equipos, verificando frenos, dirección, neumáticos, luces, alarmas, cinturones, extintores, niveles y posibles fugas. Los resultados se registrarán en el checklist correspondiente. Cualquier falla deberá comunicarse a SSOMA y el equipo no podrá utilizarse hasta su reparación. Asimismo, se verificará que los operadores cuenten con autorización y capacitación.`,
+
+  "10.2. Inspecciones rutinarias y planeadas del área SSOMA":`SSOMA realizará inspecciones en los frentes de trabajo, almacenes, talleres, oficinas e instalaciones, identificando actos y condiciones inseguras, peligros y deficiencias en los controles. Se verificará el uso de EPP, orden y limpieza, señalización, herramientas, equipos, instalaciones eléctricas y trabajos de alto riesgo. Los hallazgos serán registrados y tendrán seguimiento hasta su levantamiento.`,
+
+  "10.3. Inspecciones del Comité / Subcomité de SST":`El Comité o Subcomité de SST participará en inspecciones periódicas para identificar peligros y verificar el cumplimiento del Plan Anual de SST, procedimientos y estándares de seguridad. Se priorizarán trabajos de alto riesgo, como altura, excavaciones, electricidad, trabajos en caliente e izaje. Los hallazgos serán registrados, asignando responsables y plazos para su corrección.`,
+
+  "10.4. Inspecciones planeadas SSOMA":`El área de SSOMA ACG SAC, determina que la línea de mando de la obra deberá realizar Inspecciones de SSOMA programadas con frecuencia, las que deberán ir incluidas en el Liderazgo Visible. Además, se establece que a partir de estas inspecciones los encargados de área y trabajadores pueden generar No Conformidades (si ameritan), cuyo tratamiento se regirá por el Procedimiento SST - PROC - 019 PROCEDIMIENTO DE INCIDENTES, NO CONFORMIDADES Y ACCIONES CORRECTIVAS.
+
+Se realiza la inspección de los diferentes frentes de trabajo registrando el resultado en el Registro de Inspección SSOMA. De encontrar desviaciones se comunica a la Gerencia de Operaciones y Jefe SSOMA, para que en coordinación se propongan las medidas de control que sean necesarias para subsanar la desviación de acuerdo con un plazo que se registra en el mismo Registro, según el Nivel de riesgo que se haya detectado. Culminado el plazo el área de SSOMA realiza nuevamente una inspección del frente de trabajo con la finalidad de verificar que las medidas de control propuestas se hayan implementado. El encargado de área debe recibir el Registro de Inspección SSOMA y asegurar el levantamiento de las desviaciones. El jefe SSOMA determinará, cuando sea necesario, reportar una No Conformidad de acuerdo con lo descrito en el Procedimiento: SST - PROC - 019 PROCEDIMIENTO DE INCIDENTES, NO CONFORMIDADES Y ACCIONES CORRECTIVAS.`,
+
+  "10.5. Inspecciones planeadas del Comité / Subcomité de SST":`El Comité o Subcomité de SST efectuará inspecciones en los diferentes sectores de la obra, priorizando áreas de mayor riesgo y desviaciones recurrentes. Se verificará el cumplimiento de medidas preventivas, condiciones de equipos y procedimientos de trabajo. Los hallazgos serán registrados con sus responsables y plazos de atención, realizando seguimiento en las reuniones del Comité.`,
+
+  "10.6. Inspecciones de herramientas y equipo":`Las herramientas manuales y eléctricas serán inspeccionadas antes de su uso, verificando cables, enchufes, guardas, mangos, discos y demás componentes. No se permitirá utilizar herramientas deterioradas, modificadas o improvisadas. Las defectuosas serán identificadas y retiradas de servicio. Asimismo, se verificará su uso adecuado por personal capacitado.`,
+
+  "10.7. Inspecciones de equipos de protección personal (EPP)":`Se inspeccionarán periódicamente los EPP, verificando su estado, integridad y adecuación a los riesgos de cada actividad. Se revisarán cascos, lentes, guantes, calzado, respiradores, arneses y líneas de vida. Los equipos deteriorados, contaminados o vencidos serán retirados y reemplazados. También se reforzará su correcto uso, limpieza y conservación.`,
+
+  "10.8. Inspecciones de trabajos en altura y protección contra caídas":`Antes de iniciar trabajos en altura se inspeccionarán las condiciones del área y todos los sistemas destinados a prevenir y controlar caídas. Se verificará el estado de arneses de cuerpo completo, líneas de vida, conectores, absorbedores de energía, puntos de anclaje, barandas, plataformas, redes y demás dispositivos utilizados. También se comprobará que los puntos de anclaje sejam adecuados y que los sistemas se encuentren correctamente instalados. Se inspeccionarán las superficies de trabajo, accesos, bordes abiertos y posibles riesgos de caída de objetos. Los equipos que presenten cortes, deformaciones, desgaste, quemaduras, contaminación o cualquier otra condición que comprometa su seguridad serán retirados de servicio. Los trabajos deberán contar con las autorizaciones y controles establecidos por la empresa para actividades de alto riesgo.`,
+
+  "10.9. Inspecciones de andamios, escaleras y plataformas":`Los andamios, escaleras y plataformas serán inspeccionados antes de su uso y después de cualquier modificación o movimiento. Se verificará estabilidad, nivelación, bases, fijaciones, barandas, accesos y estado estructural. Los elementos defectuosos serán señalizados y retirados hasta su reparación o reemplazo.`,
+
+  "10.10. Inspecciones de instalaciones eléctricas provisionales":`Las instalaciones eléctricas provisionales serán inspeccionadas periódicamente para verificar el estado de tableros, cables, extensiones, enchufes, interruptores, tomacorrientes, conexiones, puesta a tierra y dispositivos de protección. Se comprobará que los tableros se encuentren protegidos, identificados, cerrados y ubicados en lugares adecuados. Los cables deberán mantenerse protegidos frente a tránsito vehicular, humedad, cortes, aplastamientos y otros daños mecánicos. No se permitirán conexiones improvisadas, empalmes inseguros, cables expuestos ni utilización de componentes deteriorados. Las instalaciones deberán ser intervenidas únicamente por personal autorizado y competente. Las deficiencias identificadas deberán ser corregidas antes de continuar utilizando la instalación cuando representen un riesgo para los trabajadores.`,
+
+  "10.11. Inspecciones de orden, limpieza y condiciones locativas":`Se realizarán inspecciones periódicas para verificar el adecuado orden y limpieza de los diferentes ambientes y frentes de trabajo de la obra. Se revisarán pasadizos, escaleras, almacenes, talleres, oficinas, áreas de trabajo, zonas de circulación y puntos de almacenamiento de materiales. Se controlará la acumulación de residuos, herramientas abandonadas, materiales mal apilados, cables atravesando zonas de tránsito, superficies resbaladizas, obstáculos y otros factores que puedan generar caídas, golpes o lesiones. También se verificará iluminación, ventilación, accesibilidad, condiciones de pisos y estructuras temporales. Los residuos deberán segregarse y disponerse en los lugares establecidos. El orden y limpieza deberán mantenerse durante toda la jornada y no únicamente al finalizar las actividades.`,
+
+  "10.12. Inspecciones de señalización, delimitación y rutas":`Se verificará que las áreas cuenten con señalización preventiva, obligatoria, informativa y de emergencia. Se inspeccionará la delimitación de excavaciones, izajes, trabajos en altura y zonas restringidas. Asimismo, las rutas de evacuación, salidas y puntos de reunión deberán permanecer señalizados, visibles y libres de obstáculos.`,
+
+  "10.13. Inspecciones de equipos de respuesta ante emergencias":`Se realizarán inspecciones periódicas de todos los equipos, recursos y sistemas destinados a la atención de emergencias. Se verificará la ubicación, accesibilidad y estado de extintores, botiquines, camillas, alarmas, luces de emergencia, equipos de comunicación, kits de control de derrames, señalización y demás recursos establecidos en el Plan de Preparación y Respuesta ante Emergencias. Se controlarán las fechas de inspección, mantenimiento, recarga y vencimiento cuando corresponda. Los equipos deberán permanecer libres de obstáculos y disponibles para su utilización inmediata. Las deficiencias encontradas deberán ser corregidas oportunamente. Asimismo, los resultados de las inspecciones podrán ser utilizados para fortalecer simulacros, capacitaciones y procedimientos de respuesta.`,
+
+  "10.14. Gestión y cierre de acciones correctivas":`Las condiciones inseguras y desviaciones detectadas generarán acciones correctivas orientadas a eliminar o controlar sus causas. Se establecerán responsables, plazos y evidencias de cumplimiento. SSOMA verificará la implementación y eficacia de las medidas antes de cerrar cada observación.`
+},
+
+"Salud Ocupacional":{
+  "11. GESTIÓN DE SALUD OCUPACIONAL": buildSaludGeneralHtml(),
+
+  "11.1. Plan de vigilancia de la salud de los trabajadores":`La empresa implementará un Plan de Vigilancia de la Salud para identificar oportunamente alteraciones relacionadas con los peligros ocupacionales y prevenir daños a la salud. Se considerarán las actividades, puestos de trabajo y tiempos de exposición. Los resultados permitirán establecer medidas preventivas adicionales, manteniendo la confidencialidad de la información médica.
+La vigilancia comprenderá:
+- Agentes ocupacionales: ruido, polvo, sustancias químicas, vibraciones y temperaturas extremas.
+- Factores ergonómicos: manipulación de cargas, posturas forzadas y movimientos repetitivos.
+- Seguimiento médico: evaluaciones ocupacionales y vigilancia de trabajadores expuestos.
+
+11.1.1. Registro de enfermedades profesionales
+La empresa mantendrá mecanismos para la identificación, registro, notificación y seguimiento de enfermedades profesionales o alteraciones de salud que puedan estar relacionadas con las condiciones de trabajo. Se considerarán los resultados de las evaluaciones médicas ocupacionales, antecedentes de exposición y demás información proporcionada por el servicio de salud ocupacional, respetando la confidencialidad de los datos médicos.
+Cuando se identifique un caso sospechoso o confirmado, se realizará la evaluación correspondiente y se analizarán las condiciones laborales relacionadas con la posible exposición. De ser necesario, se revisarán los controles existentes y se implementarán medidas para reducir o eliminar el factor de riesgo. También se realizará seguimiento de los casos identificados y se mantendrán los registros requeridos para fines de vigilancia, prevención y cumplimiento de las obligaciones aplicables.
+
+11.1.2. Evaluaciones del estado de salud de los trabajadores
+La empresa realizará evaluaciones médicas ocupacionales de los trabajadores considerando las características del puesto, los peligros identificados y las condiciones de exposición. Estas evaluaciones permitirán conocer el estado de salud relacionado con las actividades laborales y determinar las recomendaciones o restricciones ocupacionales que correspondan.
+Las evaluaciones podrán realizarse antes del inicio de determinadas actividades, durante la permanencia del trabajador en la empresa y al término de la relación laboral, de acuerdo con los requisitos aplicables y el programa de vigilancia establecido. Para trabajadores expuestos a riesgos específicos se podrán realizar evaluaciones complementarias según criterio médico ocupacional. Los resultados deberán ser manejados de manera confidencial y las recomendaciones ocupacionales deberán ser consideradas por la empresa en la asignación y ejecución de las tareas.
+
+11.1.3. Evaluaciones de riesgos para la salud de los trabajadores
+La empresa realizará la identificación y evaluación de los peligros que puedan afectar la salud de los trabajadores, considerando las actividades rutinarias y no rutinarias desarrolladas en la obra. Se evaluarán, entre otros, los riesgos derivados de ruido, vibraciones, polvo, humos, sustancias químicas, radiaciones, temperaturas, agentes biológicos, posturas forzadas, manipulación manual de cargas y factores psicosociales.
+Los resultados de estas evaluaciones serán considerados en la matriz IPERC y en la definición de controles operacionales. Cuando se identifiquen niveles de exposición que requieran medidas adicionales, se priorizará controles en la fuente, medio y trabajador, complementándose con capacitación y uso adecuado de EPP. Asimismo, se realizarán evaluaciones cuando existan modificaciones en los procesos, incorporación de nuevos equipos, cambios en las condiciones de trabajo o aparición de nuevos peligros.
+
+11.1.4. Vigilancia de los grupos específicos
+La empresa establecerá medidas de vigilancia diferenciadas para trabajadores que, debido a sus funciones, condiciones de exposición o características particulares del puesto, puedan requerir controles específicos de salud ocupacional. Se considerarán especialmente los trabajadores expuestos a ruido, polvo, sustancias químicas, vibraciones, trabajos físicamente exigentes, manipulación de cargas y otros peligros relevantes.
+La vigilancia permitirá realizar un seguimiento periódico de las condiciones de salud relacionadas con las exposiciones ocupacionales y establecer medidas preventivas cuando corresponda. También se considerará la rotación de personal, cambios de puesto, reincorporaciones después de ausencias prolongadas y recomendaciones emitidas por el servicio médico ocupacional. Las medidas adoptadas deberán buscar prevenir la aparición o agravamiento de alteraciones relacionadas con el trabajo, manteniendo la confidencialidad de la información médica y respetando las restricciones o recomendaciones ocupacionales establecidas.`,
+
+  "11.2. Exámenes Médicos Ocupacionales (EMO)":`La empresa implementará un programa de Exámenes Médicos Ocupacionales (EMO) orientado a evaluar el estado de salud de los trabajadores en relación con los peligros y riesgos asociados a sus puestos de trabajo. Los exámenes serán realizados por profesionales y establecimientos de salud competentes, considerando las características de las actividades de construcción y los factores de exposición identificados en la evaluación de riesgos. Los resultados serán tratados con carácter confidencial y servirán para establecer las recomendaciones ocupacionales necesarias y fortalecer las medidas preventivas implementadas por la empresa.
+
+11.2.1. Examen médico ocupacional de ingreso
+Antes del inicio de las actividades, cuando corresponda conforme a la normativa aplicable, se realizará la evaluación médica ocupacional de ingreso para conocer las condiciones de salud del trabajador y determinar su aptitud para las funciones que desarrollará. La evaluación deberá considerar los peligros asociados al puesto, como exposición a ruido, polvo, sustancias químicas, trabajos físicos, alturas, maquinaria y otros riesgos propios de la construcción.
+El examen permitirá identificar condiciones que requieran seguimiento o recomendaciones ocupacionales y establecer una referencia inicial para posteriores evaluaciones. La empresa deberá considerar las recomendaciones emitidas por el profesional de salud ocupacional en la asignación de tareas, sin utilizar la información médica confidencial para fines distintos a la gestión preventiva de la salud ocupacional.
+
+11.2.2. Exámenes médicos ocupacionales periódicos
+Se realizarán exámenes médicos ocupacionales periódicos de acuerdo con el programa de vigilancia de la salud, los riesgos presentes en cada puesto y la normativa aplicable. Estos exámenes permitirán realizar seguimiento de la evolución del estado de salud de los trabajadores y detectar oportunamente posibles alteraciones relacionadas con las condiciones de trabajo.
+La periodicidad y los exámenes complementarios serán determinados considerando el nivel y tipo de exposición ocupacional. Cuando los resultados evidencien alguna condición que requiera atención o seguimiento, se aplicarán las recomendaciones correspondientes y se evaluará la necesidad de fortalecer los controles existentes. Los resultados generales de vigilancia podrán ser utilizados para identificar tendencias y establecer medidas preventivas en la obra, manteniendo siempre la confidencialidad de la información médica individual.
+
+11.2.3. Examen médico ocupacional de retiro
+Al finalizar la relación laboral, se realizará el examen médico ocupacional de retiro cuando corresponda según la normativa aplicable y el programa de vigilancia de la salud. Esta evaluación permitirá registrar el estado de salud del trabajador al término de sus actividades y facilitar la identificación de posibles alteraciones relacionadas con las exposiciones ocupacionales durante su permanencia en la empresa.
+Los resultados serán gestionados de manera confidencial por el servicio de salud ocupacional. Cuando se identifique una condición que pueda estar relacionada con el trabajo, se proporcionará al trabajador la orientación correspondiente y se realizarán las acciones de seguimiento que sean aplicables. La información obtenida también podrá contribuir a evaluar la efectividad del programa de vigilancia de la salud ocupacional.`,
+
+  "11.3. Vigilancia de agentes ocupacionales":`La empresa desarrollará actividades de identificación, evaluación y vigilancia de los agentes ocupacionales presentes en los diferentes procesos y frentes de trabajo. La vigilancia estará orientada a determinar los niveles de exposición de los trabajadores y verificar la eficacia de los controles implementados. Los resultados serán considerados para actualizar la matriz IPERC, establecer medidas preventivas y definir acciones de monitoreo ocupacional cuando corresponda.
+
+11.3.1. Agentes físicos
+Se identificarán y evaluarán los agentes físicos presentes en las actividades de construcción, considerando principalmente ruido, vibraciones, iluminación, temperaturas extremas y radiaciones, cuando correspondan. Se realizarán mediciones ocupacionales de acuerdo con los niveles de riesgo y las condiciones de exposición identificadas.
+Cuando los resultados evidencien exposiciones que requieran control, se priorizarán medidas en la fuente y en el medio, como mantenimiento de equipos, aislamiento, reducción del tiempo de exposición y controles de ingeniería. El uso de protectores auditivos u otros EPP se establecerá como medida complementaria cuando corresponda. Los resultados de los monitoreos serán registrados y utilizados para evaluar la eficacia de las medidas implementadas.
+
+11.3.2. Agentes químicos
+Se identificarán las sustancias y productos químicos utilizados o generados durante las actividades de construcción, considerando aquellos que puedan producir exposición ocupacional. La empresa implementará controles mediante almacenamiento adecuado, etiquetado, hojas de datos de seguridad (SDS), ventilación y sustitución de productos cuando sea técnicamente viable. Cuando corresponda, se realizarán monitoreos para determinar los niveles de exposición. Los trabajadores recibirán capacitación sobre los peligros, medidas preventivas, uso de EPP y actuación ante derrames o contacto accidental.
+Entre los principales productos se consideran:
+- Pinturas, solventes y adhesivos.
+- Combustibles y productos de limpieza.
+- Cementos y otros materiales.
+- Gases y sustancias químicas utilizadas en los trabajos.
+
+11.3.3. Agentes biológicos, cuando corresponda
+Cuando las condiciones de la obra generen exposición a agentes biológicos, se identificarán los peligros asociados y se establecerán controles adecuados para prevenir enfermedades ocupacionales. Se considerarán situaciones relacionadas con residuos, servicios higiénicos, agua, alimentos, contacto con animales o vectores y otras fuentes potenciales de exposición.
+Se implementarán medidas de higiene, limpieza, manejo adecuado de residuos, control de vectores y disponibilidad de servicios higiénicos en condiciones adecuadas. Los trabajadores recibirán capacitación sobre higiene personal, lavado de manos, manipulación segura de residuos y prevención de enfermedades transmisibles. Cuando corresponda, se establecerán medidas adicionales de vigilancia de acuerdo con la naturaleza de la exposición.
+
+11.3.4. Factores ergonómicos y disergonómicos
+La empresa identificará y evaluará los factores ergonómicos y disergonómicos presentes en las actividades de construcción, considerando principalmente manipulación manual de cargas, posturas forzadas, movimientos repetitivos, esfuerzos físicos, empuje y tracción de cargas y trabajos prolongados en determinadas posiciones.
+Se implementarán medidas orientadas a reducir la sobrecarga física mediante la mecanización o asistencia para el movimiento de materiales, organización de las tareas, rotación cuando corresponda, pausas activas, adecuación de herramientas y capacitación en técnicas seguras de manipulación. Las actividades con mayor exigencia física serán evaluadas periódicamente para determinar si los controles implementados son suficientes y realizar mejoras cuando sean necesarias.`,
+
+  "11.4. Monitoreo de agentes ocupacionales":`La empresa implementará un programa de monitoreo de agentes ocupacionales para identificar, medir y evaluar los niveles de exposición de los trabajadores a los peligros presentes en las actividades de construcción. Las mediciones serán realizadas mediante equipos y metodologías apropiadas, por personal competente o entidades especializadas cuando corresponda. Los resultados serán comparados con los criterios y valores de referencia establecidos por la normativa aplicable. Cuando se identifiquen exposiciones que requieran intervención, se implementarán controles siguiendo la jerarquía de controles, priorizando medidas en la fuente y el medio antes que el uso de EPP. Finalmente, los resultados serán documentados y utilizados para actualizar la matriz IPERC y fortalecer el programa de vigilancia de la salud.
+
+El monitoreo considerará:
+- Agentes físicos.
+- Agentes químicos.
+- Agentes biológicos.
+- Factores ergonómicos.
+- Otros factores que puedan afectar la salud de los trabajadores.`,
+
+  "11.5. Programa de ergonomía y TME":`La empresa desarrollará un programa de ergonomía orientado a prevenir lesiones y trastornos musculoesqueléticos derivados de las condiciones de trabajo. Se identificarán actividades que involucren manipulación manual de cargas, posturas forzadas, movimientos repetitivos, esfuerzos físicos, trabajos prolongados de pie o agachados y otras condiciones que puedan generar sobrecarga física.
+
+Se realizarán evaluaciones ergonómicas de los puestos y actividades que presenten mayor exposición, estableciendo medidas como modificación de métodos de trabajo, utilización de ayudas mecánicas, reducción de cargas, adecuación de herramientas, organización de las tareas y pausas activas. Los trabajadores recibirán capacitación sobre técnicas correctas de levantamiento y transporte de materiales, higiene postural y prevención de lesiones. Las medidas implementadas serán revisadas periódicamente para verificar su eficacia.`,
+
+  "11.6. Promoción de hábitos saludables":`La empresa promoverá hábitos saludables entre los trabajadores mediante actividades de capacitación, sensibilización y comunicación orientadas a prevenir enfermedades ocupacionales y favorecer el bienestar durante la jornada laboral. Asimismo, se reforzarán las medidas de prevención relacionadas con los principales riesgos presentes en la obra, promoviendo el cumplimiento de los controles establecidos y el uso adecuado de los EPP. Se podrán desarrollar campañas de salud, charlas preventive y actividades de promoción de estilos de vida saludables, de acuerdo con las necesidades identificadas en la población trabajadora.
+
+Se desarrollarán acciones relacionadas con:
+- Alimentación saludable e hidratación.
+- Descanso adecuado.
+- Higiene personal.
+- Actividad física.
+- Prevención del consumo de sustancias que puedan afectar la seguridad.`,
+
+  "11.7. Vigilancia de trabajadores expuestos a riesgos específicos":`La empresa establecerá mecanismos de vigilancia para los trabajadores que desarrollen actividades con exposición significativa a determinados peligros ocupacionales. Se considerarán, según corresponda, trabajadores expuestos a ruido, vibraciones, polvo, sustancias químicas, temperaturas extremas, radiaciones, esfuerzos físicos, movimientos repetitivos y otros factores identificados en la evaluación de riesgos.
+
+La vigilancia permitirá realizar seguimiento de las condiciones de exposición y de las medidas preventivas implementadas. Cuando corresponda, se realizarán monitoreos ocupacionales y evaluaciones médicas complementarias según criterio del profesional de salud ocupacional. Los resultados serán utilizados para determinar la necesidad de reforzar controles, modificar procedimientos, reducir tiempos de exposición o implementar medidas adicionales de protección.`
+},
+
+"Subcontratas y Prov.":{
+  "12. CLIENTES, SUBCONTRATOS Y PROVEEDORES": buildSubcontratasHtml()
+},
+
+"Presupuesto y Legal":{
+  "13.1. Presupuesto Asignado al Proyecto":`El presupuesto asignado para la implementación, ejecución y mantenimiento del Plan Anual de Seguridad y Salud en el Trabajo (PASST) en la obra “Demolición, Ampliación y Remodelación de las instalaciones de la Sede Lima – Norte” del ICPNA asciende a un total de **S/. 978,580.50**.
+
+Este monto se encuentra totalmente independizado y garantizado por la Alta Gerencia de ARQUITECTURA Y CONTRATISTAS GENERALES S.A.C. (ACG S.A.C.), asegurando recursos intangibles y suficientes para cubrir los siguientes rubros preventivos prioritarios:
+- Dotación continua y reposición oportuna de Equipos de Protección Personal (EPP) básicos y específicos certificados.
+- Instalación y mantenimiento de Equipos de Protección Colectiva (EPC), señalización de seguridad, barandas perimetrales y mallas de contención.
+- Contratación de servicios especializados de medicina ocupacional, auditorías externas legales (D.S. N° 014-2013-TR), ejecución de Exámenes Médicos Ocupacionales (EMO) y monitoreos de agentes físicos, químicos, biológicos y ergonómicos.
+- Implementación del programa de capacitaciones, inducciones, charlas diarias de 10 minutos, simulacros y adquisición de recursos para la respuesta ante emergencias y botiquines.`,
+
+  "13.2. Marco Jurídico Aplicable":`El Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST) implementado por ACG S.A.C. para el proyecto ICPNA Sede Lima Norte se sustenta en el cumplimiento irrestricto de la legislación nacional vigente en materia de prevención de riesgos laborales y normativas técnicas sectoriales de construcción:
+
+1. Normativa Legal Base en SST:
+- **Ley N.° 29783:** Ley de Seguridad y Salud en el Trabajo, y sus modificatorias (Ley N.° 30222 y Ley N.° 31246).
+- **D.S. N.° 005-2012-TR:** Reglamento de la Ley N.° 29783 y sus modificatorias.
+- **D.S. N.° 011-2019-TR:** Reglamento de Seguridad y Salud en el Trabajo para el Sector Construcción.
+- **R.M. N.° 050-2013-TR:** Formatos referenciales y lista de verificación de los lineamientos del SGSST.
+- **D.S. N.° 014-2013-TR:** Reglamento de la Ley N.° 29981 que regula la obligación de auditorías externas del SGSST.
+
+2. Normas Técnicas y Sectoriales Aplicables:
+- **Norma Técnica de Edificación G.050:** Seguridad durante la Construcción.
+- **Norma ISO 45001:2018:** Sistemas de gestión de la seguridad y salud en el trabajo — Requisitos con orientación para su uso.
+- **R.M. N.° 312-2011-MINSA:** Protocolos de Exámenes Médicos Ocupacionales y Guías de Diagnóstico de los Exámenes Médicos por Actividad.
+- **R.M. N.° 111-2013-MEM/DM:** Reglamento de Seguridad y Salud en el Trabajo con Electricidad (RESESATE).
+- **Ley N.° 30102:** Ley que dispone medidas preventivas contra los efectos nocivos de la radiación solar.`
+},
+
+"Emergencias":{
+  "14. PROCEDIMIENTOS DE PREPARACIÓN Y RESPUESTA ANTE EMERGENCIAS":`El Plan de Preparación y Respuesta ante Emergencias de ACG S.A.C. establece la organización, los recursos, las directrices operativas y los flujos de comunicación necesarios para garantizar una respuesta rápida, coordinada y eficaz ante la ocurrencia de eventos imprevistos o desastres durante la ejecución de la obra “Demolición, Ampliación y Remodelación de las instalaciones de la Sede Lima – Norte” del ICPNA.
+
+Su objetivo principal es salvaguardar la vida e integridad física de los trabajadores, contratistas, personal administrativo y terceros, protegiendo las instalaciones, los equipos y el medio ambiente frente a situaciones críticas como sismos, incendios, colapsos estructurales, accidentes graves o derrames de sustancias peligrosas.`,
+
+  "14.1. Procedimientos Operativos de Respuesta":`Se implementarán protocolos específicos de actuación inmediata y control operativo organizados bajo un enfoque de respuesta por fases ante las emergencias más probables identificadas en la obra:
+
+- **Actuación ante Sismos:** Suspensión inmediata de trabajos en altura, frentes de demolición y excavación; repliegue ordenado del personal hacia las zonas seguras internas debidamente señalizadas y posterior evacuación hacia los puntos de reunión exteriores establecidos en el plano de rutas de evacuación.
+- **Actuación ante Incendios y Conatos:** Activación de la alarma general de obra, corte inmediato de los suministros eléctricos provisionales en el sector afectado, despliegue y uso de extintores portátiles (PQS, CO2 o agua presurizada) por personal capacitado, y solicitud de apoyo externo a los Cuerpos de Bomberos Voluntarios del Perú si la magnitud lo amerita.
+- **Actuación ante Accidentes Graves o Caídas:** Aplicación de los protocolos de primeros auxilios por parte de los brigadistas entrenados, inmovilización segura del accidentado con camilla rígida y collarín cervical, comunicación inmediata a la clínica afiliada al SCTR para el despacho de ambulancia y reporte preliminar al área de SSOMA.
+- **Actuación ante Derrames de Sustancias Químicas o Combustibles:** Contención del derrumbe utilizando los kits de control de derrames (material absorbente, paños, arena), uso obligatorio de EPP específico por los brigadistas, prevención de filtraciones hacia la red de desagüe y disposición final segura de los residuos contaminados como residuos peligrosos.`,
+
+  "14.2. Brigadas y Cronograma de Simulacros":`Para garantizar la operatividad de la respuesta, se conformarán brigadas multifuncionales de emergencia integradas por trabajadores voluntarios y personal técnico de obra capacitados en primeros auxilios, lucha contra incendios, evacuación y rescate.
+
+- **Conformación y Capacitación de Brigadas:** Los brigadistas recibirán entrenamiento teórico-práctico mensual dictado por especialistas en seguridad, contando con distintivos visibles (brazaletes, cascos identificatorios) y equipos de protección y rescate asignados en estaciones estratégicas de obra.
+- **Cronograma Anual de Simulacros:** Se programarán e implementarán simulacros periódicos inopinados y planeados a lo largo del año en coordinación con el Comité/Subcomité de SST, contemplando escenarios específicos de sismo con heridos, conato de incendio en almacenes, rescate en altura y derrumbe parcial en frentes de excavación.
+- **Evaluación y Retroalimentación:** Cada simulacro contará con observadores y evaluadores que medirán los tiempos de respuesta, la eficacia de la evacuación y el funcionamiento de los canales de comunicación, generando un informe de lecciones aprendidas para la mejora continua del plan de emergencias.`
+},
+
+"Investigación Acc.":{
+  "15. INVESTIGACIÓN DE ACCIDENTES, INCIDENTES Y ENFERMEDADES OCUPACIONALES": buildInvestigacionAccIntroHtml(),
+
+  "15.1. Procedimiento de Reporte, Notificación y Plazos Legales":`Todo incidente, incidente peligroso, accidente de trabajo o caso sospechoso de enfermedad ocupacional debe ser reportado de manera inmediata por el trabajador involucrado, testigos o supervisor directo al Jefe SSOMA y al Residente de Obra, asegurando en primer orden la atención médica de emergencia y la preservación del área del evento.
+
+Plazos y canales de notificación obligatorios:
+- Reporte Interno Preliminar: Dentro de la primera hora de ocurrido el suceso, el Especialista SSOMA emitirá el Reporte Preliminar de Incidente/Accidente hacia la Gerencia General, Gerencia de Operaciones, Comité/Subcomité de SST y supervisión del cliente (ICPNA).
+- Notificación al Ministerio de Trabajo y Promoción del Empleo (MTPE):
+  • Accidentes de Trabajo Mortales e Incidentes Peligrosos: El empleador notificará al MTPE a través del Sistema Informático de Notificación de Accidentes de Trabajo, Incidentes Peligrosos y Enfermedades Ocupacionales (SAT) dentro del plazo máximo de veinticuatro (24) horas de ocurrido el evento.
+  • Accidentes de Trabajo Incapacitantes y Enfermedades Ocupacionales: Serán notificados por el Centro Médico Asistencial que atiende al trabajador hasta el último día hábil del mes siguiente de ocurrido el accidente o diagnosticada la enfermedad.
+- Comunicación al Comité / Subcomité de SST: Convocatoria extraordinaria dentro de las 24 horas posteriores a un accidente incapacitante, incidente peligroso o mortal para participar activamente en la inspección del lugar y la investigación oficial.`,
+
+  "15.2. Metodología de Investigación y Análisis de Causas":`La investigación será conducida por la Comisión Investigadora integrada por el Jefe SSOMA, el Residente de Obra, el Supervisor del frente involucrado y los representantes del Comité/Subcomité de SST, aplicando el procedimiento interno SST-PROC-019.
+
+Etapas metodológicas de la investigación:
+1. Atención y Aseguramiento de la Escena: Brindar primeros auxilios, trasladar al trabajador accidentado al centro médico afiliado (SCTR) y aislar el área sin alterar evidencias físicas, equipos, herramientas ni condiciones del entorno.
+2. Recopilación de Evidencias (Método de las 4P):
+   - Posición: Registro fotográfico, croquis y ubicación exacta de personas, maquinaria y materiales.
+   - Personas: Entrevistas individuales y reservadas al accidentado (si su estado lo permite) y testigos directos.
+   - Partes: Inspección técnica de herramientas, EPP, equipos, andamios o instalaciones involucradas.
+   - Papeles: Revisión documental de ATS, PETAR, IPERC, capacitaciones, inducciones, check-list pre-uso y EMO.
+3. Análisis Causal (Modelo de Causalidad de Pérdidas / Árbol de Causas / 5 Porqués):
+   - Identificación de Causas Inmediatas: Actos subestándares y condiciones subestándares presentes al momento del evento.
+   - Identificación de Causas Básicas: Factores personales y factores del trabajo (fallas de supervisión, mantenimiento, ingeniería, compras o estándares).
+   - Fallas en el Sistema de Gestión: Deficiencias en los elementos del SGSST que permitieron la existencia de las causas básicas.
+4. Plan de Acción Correctiva y Preventiva (CAPA): Formulación de controles siguiendo la jerarquía de controles, asignando responsables, plazos de ejecución y recursos, actualizando obligatoriamente la Matriz IPERC y difundiendo la lección aprendida a todo el personal de obra.`,
+
+  "15.3. Estadísticas de Seguridad e Indicadores Reactivos":`La Jefatura SSOMA consolidará mensualmente la estadística de accidentabilidad y enfermedades ocupacionales del proyecto utilizando los formatos referenciales de la R.M. N.° 050-2013-TR y los criterios técnicos del D.S. N.° 011-2019-TR, calculando los siguientes indicadores reactivos:
+
+- Índice de Frecuencia (IF): Número de accidentes incapacitantes y mortales ocurridos por cada millón de horas-hombre trabajadas (HHT):
+  IF = (N° de Accidentes Incapacitantes y Mortales × 1,000,000) / Total HHT
+
+- Índice de Severidad o Gravedad (IG): Número total de días perdidos o cargados por accidentes de trabajo por cada millón de horas-hombre trabajadas:
+  IG = (N° de Días Perdidos o Cargados × 1,000,000) / Total HHT
+
+- Índice de Accidentabilidad (IA): Indicador compuesto que relaciona frecuencia y severidad:
+  IA = (IF × IG) / 1,000
+
+- Tasa de Incidencia de Enfermedades Ocupacionales (TIEO): Número de casos nuevos diagnosticados respecto al total de trabajadores expuestos en el periodo.`
+},
+
+"Auditoría y Registros":{
+  "16. AUDITORÍA Y EVALUACIÓN DEL SISTEMA DE GESTIÓN DE SST":`Con el objetivo de verificar la conformidad, eficacia e implementación real del Plan Anual de Seguridad y Salud en el Trabajo en la obra ICPNA Sede Lima Norte, ACG S.A.C. ejecutará evaluaciones sistemáticas y auditorías periódicas conforme al artículo 43 de la Ley N.° 29783, el D.S. N.° 005-2012-TR y el D.S. N.° 014-2013-TR.
+
+Estas evaluaciones permitirán comprobar el grado de cumplimiento de los requisitos legales vigentes, los estándares corporativos de SSOMA y la norma ISO 45001:2018, identificando oportunidades de mejora y desviaciones antes de que se materialicen en accidentes o sanciones administrativas.`,
+
+  "16.1. Auditorías Internas y Auditorías Externas Legales":`El programa de auditorías del proyecto comprende dos modalidades complementarias:
+
+a) Auditorías Internas del SGSST:
+- Serán ejecutadas con frecuencia semestral por auditores internos calificados e independientes de las actividades auditadas.
+- Evaluarán todos los procesos de obra: gestión documental, Matriz IPERC, ejecución de PETS/PETAR, capacitaciones, inspecciones, vigilancia de la salud ocupacional (EMO), preparación ante emergencias y control de subcontratistas.
+- Los resultados se consolidarán en el Informe de Auditoría Interna, detallando fortalezas, observaciones y No Conformidades, las cuales serán tratadas mediante planes de acción correctiva con seguimiento hasta su cierre verificado.
+
+b) Auditorías Externas Obligatorias (D.S. N.° 014-2013-TR):
+- Se realizarán mediante auditores independientes debidamente inscritos y autorizados en el Registro de Auditores del Ministerio de Trabajo y Promoción del Empleo (MTPE).
+- La selección del auditor contará con la participación activa de los trabajadores y sus representantes ante el Comité/Subcomité de SST, quienes evaluarán las propuestas técnicas y recibirán copia íntegra del informe final.
+- Las recomendaciones y no conformidades detectadas serán incorporadas al programa de mejora continua de la obra.`,
+
+  "16.2. Indicadores de Desempeño y Seguimiento del Plan (KPIs)":`La evaluación del desempeño preventivo del proyecto se realizará mensualmente mediante indicadores proactivos y reactivos presentados ante el Comité/Subcomité de SST y la Gerencia:
+
+- Porcentaje de Cumplimiento del Programa Anual de SST (% PASST): (Actividades ejecutadas / Actividades programadas) × 100 — Meta: ≥ 95%.
+- Porcentaje de Cumplimiento de Capacitaciones (% CC): (Capacitaciones ejecutadas / Capacitaciones programadas) × 100 — Meta: 100%.
+- Porcentaje de Cumplimiento de Inspecciones (% CI): (Inspecciones realizadas / Inspecciones programadas) × 100 — Meta: 100%.
+- Porcentaje de Levantamiento de Observaciones y Acciones Correctivas (% LAC): (Observaciones cerradas en plazo / Total de observaciones detectadas) × 100 — Meta: ≥ 90%.
+- Cumplimiento de Exámenes Médicos Ocupacionales (% EMO): (Trabajadores con EMO vigente antes de iniciar labores / Total de trabajadores en obra) × 100 — Meta: 100%.`
+},
+
+"Mejora Continua y Registros":{
+  "18. REVISIÓN POR LA DIRECCIÓN Y MEJORA CONTINUA":`En cumplimiento del artículo 46 de la Ley N.° 29783 y el requisito 9.3 de la norma ISO 45001:2018, la Alta Dirección de ACG S.A.C. (Gerencia General y Gerencia de Operaciones), junto con la Residencia de Obra y la Jefatura SSOMA, realizará la Revisión del Sistema de Gestión de SST como mínimo una (01) vez al año o cuando ocurran cambios significativos en la obra.
+
+Elementos de entrada para la Revisión por la Dirección:
+- Grado de cumplimiento de la Política y los Objetivos de SST del proyecto ICPNA Sede Lima Norte.
+- Resultados de las auditorías internas, auditorías externas legales y fiscalizaciones de entidades competentes (SUNAFIL / Municipalidad).
+- Estadísticas de accidentabilidad, investigación de incidentes/accidentes y estado de las acciones correctivas y preventivas (CAPA).
+- Resultados del Programa de Vigilancia de la Salud Ocupacional y monitoreos de agentes físicos, químicos, biológicos y ergonómicos.
+- Acuerdos, recomendaciones y consultas formuladas por el Comité/Subcomité de SST y los trabajadores.
+- Adecuación de recursos financieros, humanos y materiales asignados al SGSST.
+
+Resultados y decisiones de mejora continua:
+Como resultado de la revisión, la Dirección emitirá un Acta de Revisión Gerencial estableciendo compromisos concretos sobre la pertinencia y eficacia del sistema, actualización de metas, asignación de nuevos recursos, modificación de procedimientos operativos y acciones estratégicas para el fortalecimiento continuo de la cultura preventiva en obra.`,
+
+  "19. CONTROL DOCUMENTAL Y CUSTODIA DE REGISTROS OBLIGATORIOS":`ACG S.A.C. garantiza el control, actualización, disponibilidad, confidencialidad y conservación de toda la documentación y registros obligatorios del Sistema de Gestión de Seguridad y Salud en el Trabajo, conforme al artículo 28 de la Ley N.° 29783, los artículos 32, 33 y 35 del D.S. N.° 005-2012-TR y la R.M. N.° 050-2013-TR.
+
+Registros obligatorios implementados en obra:
+1. Registro de accidentes de trabajo, enfermedades ocupacionales, incidentes peligrosos y otros incidentes.
+2. Registro de exámenes médicos ocupacionales (custodiado bajo estricta reserva por el Médico Ocupacional).
+3. Registro del monitoreo de agentes físicos, químicos, biológicos, psicosociales y factores de riesgo disergonómicos.
+4. Registro de inspecciones internas de seguridad y salud en el trabajo.
+5. Registro de estadísticas de seguridad y salud.
+6. Registro de equipos de seguridad o emergencia (entrega de EPP y control de extintores/botiquines).
+7. Registro de inducción, capacitación, entrenamiento y simulacros de emergencia.
+8. Registro de auditorías del Sistema de Gestión de SST.
+
+Plazos legales de conservación y archivo:
+- Registros de Enfermedades Ocupacionales: Conservación obligatoria por un periodo de veinte (20) años.
+- Registros de Accidentes de Trabajo e Incidentes Peligrosos: Conservación obligatoria por un periodo de diez (10) años posteriores al suceso.
+- Demás Registros Obligatorios del SGSST (inspecciones, capacitaciones, monitoreos, equipos, auditorías): Conservación obligatoria por un periodo de cinco (05) años posteriores al evento.
+
+Los registros activos permanecerán disponibles en la oficina de SSOMA de la obra ICPNA Sede Lima Norte (en formato físico y respaldo digital en la nube) para consulta de los trabajadores, el Comité/Subcomité de SST y la autoridad inspectiva de trabajo.`
+}
+};
+
+const teamMembers = [
+  { name: "Ore Llamoctanta, Andy Jean Pierre", code: "23170297", photo: "https://drive.google.com/thumbnail?id=1SBTfoBTBDG30htHxZlII8e_FOK5SqlWa&sz=w500" },
+  { name: "Espinoza Contreras, Arnol Yamier", code: "23170111", photo: "https://drive.google.com/thumbnail?id=1QDjd2Hrtm88UrwHw9eDG6FPeZp2kCWAz&sz=w500" },
+  { name: "Nuñuvero Ramirez, Tania Erika", code: "23170296", photo: "https://drive.google.com/thumbnail?id=1KnsZbA0nklgbCnBWb6kT7vQT4WizNEWf&sz=w500" },
+  { name: "Lucero Cabudiva, Martin Fernando", code: "23170293", photo: "image_c3bbe2.png", fallback: "https://drive.google.com/thumbnail?id=1QeDawvTH347DZJbyRGYhhxQbLmFJZUma&sz=w500" },
+  { name: "Mamani Fernández, Cristian Eugenio", code: "23170294", photo: "https://drive.google.com/thumbnail?id=18XcIlp_vVLrDw4Drgavh9E1vlQn87HYb&sz=w500" }
+];
+
+const groups=[
+  ["Inicio","Integrantes","Introducción","Alcance y Línea Base","Política y Objetivos de SST","Comité de SST","IPERC y Mapas","Organización y Responsabilidades"],
+  ["Capacitaciones","PETS y PETAR","Inspecciones","Salud Ocupacional","Subcontratas y Prov.","Presupuesto y Legal","Emergencias","Investigación Acc.","Auditoría y Registros","Mejora Continua y Registros","Panel Resumen"]
+];
+
+function renderNav(){
+ groups.forEach((g,i)=>{
+  const row=document.getElementById("nav"+(i+1));
+  row.style.gridTemplateColumns = `repeat(${g.length}, 1fr)`;
+  g.forEach(name=>{
+   const b=document.createElement("button"); b.textContent=name; b.onclick=()=>show(name); b.dataset.name=name;
+   row.appendChild(b);
+  });
+ });
+}
+
+function active(name){
+ document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.name===name));
+}
+
+function show(name){
+ active(name);
+ const main=document.getElementById("main");
+ 
+ if(name==="Inicio"){
+  main.innerHTML=`<div class="home">
+   <iframe class="video-frame" src="https://drive.google.com/file/d/14tYDe5dwf7YztPUapnPgI-66p-hNolg8/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>`;
+  return;
+ }
+
+ if(name==="Integrantes"){
+  let cardsHtml = teamMembers.map(m => `
+    <div class="member-card">
+      <div class="member-photo-slot">
+        ${m.photo ? `<img src="${m.photo}" alt="${m.name}" ${m.fallback ? `onerror="this.onerror=null;this.src='${m.fallback}';"` : ""}>` : `<span style="font-size:12px;color:#00e5ff">[ Foto ]</span>`}
+      </div>
+      <div class="member-name">${m.name}</div>
+      <div class="member-code">${m.code}</div>
+      <div class="member-role">Integrante</div>
+    </div>
+  `).join("");
+
+  main.innerHTML = `
+    <div class="team-container">
+      <div class="team-header">
+        <h2>GRUPO N° 4</h2>
+      </div>
+      <div class="team-grid">
+        ${cardsHtml}
+      </div>
+    </div>
+  `;
+  return;
+ }
+
+ if(name==="Panel Resumen"){
+  main.innerHTML = `
+    <div class="dash-container">
+      <div class="dash-topbar">
+        <div class="dash-title-group">
+          <div class="dash-cal-icon">📅</div>
+          <div class="dash-titles">
+            <h2>Plan Anual de Seguridad y Salud en el Trabajo</h2>
+            <h3>Facultad de Ingeniería Industrial - 2026</h3>
+            <p>Trabajando por un entorno seguro, saludable y sostenible</p>
+          </div>
+        </div>
+        <div class="dash-top-right">
+          <div class="dash-gen-date">
+            <span>📅</span>
+            <span>Fecha de generación:<br><b>15 de abril de 2026</b></span>
+          </div>
+          <div class="dash-year-pill">Año: 2026</div>
+        </div>
+      </div>
+
+      <div class="dash-kpis">
+        <div class="kpi-card blue"><div class="kpi-ico">📋</div><div class="kpi-info"><small>Total de actividades</small><b>32</b><span>Plan anual</span></div></div>
+        <div class="kpi-card green"><div class="kpi-ico">✓</div><div class="kpi-info"><small>Completadas</small><b>8</b><span>25% del total</span></div></div>
+        <div class="kpi-card amber"><div class="kpi-ico">🕒</div><div class="kpi-info"><small>En proceso</small><b>16</b><span>50% del total</span></div></div>
+        <div class="kpi-card red"><div class="kpi-ico">⏳</div><div class="kpi-info"><small>Pendientes</small><b>8</b><span>25% del total</span></div></div>
+        <div class="kpi-card purple"><div class="kpi-ico">🛡️</div><div class="kpi-info"><small>Riesgos identificados</small><b>12</b><span>En evaluación</span></div></div>
+      </div>
+
+      <div class="dash-progress-box">
+        <div class="dash-progress-title"><span>⬆ Avance del Plan Anual</span><span style="color:#ffffff">25%</span></div>
+        <div class="dash-prog-bar"><div class="dash-prog-fill"></div></div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-panel">
+          <div class="dash-panel-header"><span class="icon">☵</span><span>Actividades del Plan</span></div>
+          <div class="dash-table-wrap">
+            <table class="dtable">
+              <thead><tr><th>N°</th><th>Actividad</th><th>Área responsable</th><th>Fecha inicio</th><th>Fecha fin</th><th>Estado</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Elaboración de la línea base del sistema de gestión</td><td>SST</td><td>01/01/2026</td><td>31/01/2026</td><td><span class="pill completada">Completada</span></td></tr>
+                <tr><td>2</td><td>Inducción y capacitación en SST</td><td>RR.HH. / SST</td><td>02/02/2026</td><td>28/02/2026</td><td><span class="pill completada">Completada</span></td></tr>
+                <tr><td>3</td><td>Identificación de peligros y evaluación de riesgos</td><td>SST</td><td>01/03/2026</td><td>31/03/2026</td><td><span class="pill en-proceso">En proceso</span></td></tr>
+                <tr><td>4</td><td>Inspecciones internas de seguridad</td><td>SST</td><td>01/04/2026</td><td>30/04/2026</td><td><span class="pill en-proceso">En proceso</span></td></tr>
+                <tr><td>5</td><td>Simulacros de emergencia</td><td>SST</td><td>15/05/2026</td><td>15/05/2026</td><td><span class="pill pendiente">Pendiente</span></td></tr>
+                <tr><td>6</td><td>Campaña de salud ocupacional</td><td>Medicina ocupacional</td><td>01/06/2026</td><td>30/06/2026</td><td><span class="pill en-proceso">En proceso</span></td></tr>
+                <tr><td>7</td><td>Seguimiento y auditoría del SG-SST</td><td>SST</td><td>01/09/2026</td><td>30/09/2026</td><td><span class="pill pendiente">Pendiente</span></td></tr>
+                <tr><td>8</td><td>Revisión por la dirección</td><td>Decanato</td><td>15/11/2026</td><td>30/11/2026</td><td><span class="pill pendiente">Pendiente</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn-see-all">📥 Ver todas las actividades →</button>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-header"><span class="icon">🛡️</span><span>Distribución de actividades por área</span></div>
+          <div class="donut-section">
+            <div class="donut-svg-wrap"><div class="donut-ring"><div class="donut-inner"><b>32</b><small>actividades</small></div></div></div>
+            <div class="donut-legend">
+              <div class="legend-row"><span class="legend-label"><i class="legend-dot" style="background:#0096c7"></i> Académica</span><span class="legend-val"><b>40%</b> (13)</span></div>
+              <div class="legend-row"><span class="legend-label"><i class="legend-dot" style="background:#00e5a3"></i> Administrativa</span><span class="legend-val"><b>25%</b> (8)</span></div>
+              <div class="legend-row"><span class="legend-label"><i class="legend-dot" style="background:#f59e0b"></i> SST</span><span class="legend-val"><b>15%</b> (5)</span></div>
+              <div class="legend-row"><span class="legend-label"><i class="legend-dot" style="background:#8b5cf6"></i> Estudiantes</span><span class="legend-val"><b>10%</b> (3)</span></div>
+              <div class="legend-row"><span class="legend-label"><i class="legend-dot" style="background:#f43f5e"></i> Otros</span><span class="legend-val"><b>10%</b> (3)</span></div>
+            </div>
+          </div>
+
+          <div class="dash-panel-header" style="margin-bottom:0"><span class="icon">📅</span><span>Cronograma mensual (2026)</span></div>
+          <div class="bchart">
+            <div class="bcol"><div class="bstack" style="height:35px"><div class="b-seg-done" style="height:100%"></div></div><small>Ene</small></div>
+            <div class="bcol"><div class="bstack" style="height:42px"><div class="b-seg-done" style="height:100%"></div></div><small>Feb</small></div>
+            <div class="bcol"><div class="bstack" style="height:40px"><div class="b-seg-prog" style="height:60%"></div><div class="b-seg-done" style="height:40%"></div></div><small>Mar</small></div>
+            <div class="bcol"><div class="bstack" style="height:55px"><div class="b-seg-prog" style="height:70%"></div><div class="b-seg-wait" style="height:30%"></div></div><small>Abr</small></div>
+            <div class="bcol"><div class="bstack" style="height:62px"><div class="b-seg-wait" style="height:50%"></div><div class="b-seg-prog" style="height:50%"></div></div><small>May</small></div>
+            <div class="bcol"><div class="bstack" style="height:52px"><div class="b-seg-wait" style="height:30%"></div><div class="b-seg-prog" style="height:70%"></div></div><small>Jun</small></div>
+            <div class="bcol"><div class="bstack" style="height:25px"><div class="b-seg-prog" style="height:100%"></div></div><small>Jul</small></div>
+            <div class="bcol"><div class="bstack" style="height:38px"><div class="b-seg-wait" style="height:100%"></div></div><small>Ago</small></div>
+            <div class="bcol"><div class="bstack" style="height:58px"><div class="b-seg-wait" style="height:40%"></div><div class="b-seg-prog" style="height:60%"></div></div><small>Sep</small></div>
+            <div class="bcol"><div class="bstack" style="height:48px"><div class="b-seg-done" style="height:50%"></div><div class="b-seg-wait" style="height:50%"></div></div><small>Oct</small></div>
+            <div class="bcol"><div class="bstack" style="height:82px"><div class="b-seg-wait" style="height:30%"></div><div class="b-seg-prog" style="height:40%"></div><div class="b-seg-done" style="height:30%"></div></div><small>Nov</small></div>
+            <div class="bcol"><div class="bstack" style="height:62px"><div class="b-seg-wait" style="height:35%"></div><div class="b-seg-prog" style="height:65%"></div></div><small>Dic</small></div>
+          </div>
+          <div class="bchart-legend">
+            <span><i class="legend-dot" style="background:#00e5a3"></i> Completadas</span>
+            <span><i class="legend-dot" style="background:#f59e0b"></i> En proceso</span>
+            <span><i class="legend-dot" style="background:#f43f5e"></i> Pendientes</span>
+          </div>
+
+          <div class="safety-quote-card">
+            <div class="shield-icon">🛡️</div>
+            <div class="safety-quote-text">La seguridad no es un acto,<br>es un hábito.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  return;
+ }
+
+ const subs=data[name]||{};
+ const keys=Object.keys(subs);
+ main.innerHTML=`<div class="module"><aside class="sidebar"><h3>${name.toUpperCase()}</h3><div id="subnav"></div></aside><section class="card"><h2 id="title"></h2><div id="content" class="content"></div></section></div>`;
+ const subnav=document.getElementById("subnav");
+ keys.forEach((key,i)=>{
+  const b=document.createElement("button"); b.textContent=key; b.onclick=()=>selectSub(key,b);
+  subnav.appendChild(b);
+  if(i===0) selectSub(key,b);
+ });
+}
+
+function selectSub(key,button){
+ document.querySelectorAll(".sidebar button").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+ document.getElementById("title").textContent=key.toUpperCase();
+ 
+ const rawContent = (Object.values(data).flatMap(x=>Object.entries(x)).find(([k])=>k===key)||["","Sección en desarrollo."])[1];
+ const contentEl = document.getElementById("content");
+ 
+ if(typeof rawContent === "string" && (rawContent.includes("<div") || rawContent.includes("<table") || rawContent.includes("<p>"))) {
+   contentEl.innerHTML = rawContent;
+ } else {
+   contentEl.textContent = rawContent;
+ }
+}
+
+renderNav(); show("Inicio");
+</script>
+</body>
+</html>
